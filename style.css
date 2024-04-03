@@ -1,0 +1,124 @@
+body{
+    margin: 0;
+}
+header{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 10px 0;
+    background-color:#FCF8F3;
+}
+.logo{
+    content:url("./images/logo.svg")
+}
+
+.nav_menu{
+    display: flex;
+    width: 60%;
+    align-items:center;
+    justify-content: start;
+    flex-direction: row;
+}
+
+nav{
+    width: 40%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    
+}
+nav > a{
+    text-decoration: none;
+    color: #000000;
+}
+
+.search-photo{
+    content:url("./images/search.svg")
+}
+
+.shoping{
+    content: url("./images/shoping.svg")
+}
+.header-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width:10%;
+}
+
+.basket{
+    display: flex;
+    width: 10%;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: row;
+}
+
+.container-first{
+    width: 100%;
+    background-repeat: no-repeat;
+    background-image: url("./images/backgroundfirst.svg");
+    height: 730px;
+    display: flex;
+    align-items:end;
+}
+
+.textForFirst{
+    width: 40%;
+    margin-left: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items:start;
+}
+
+.title-first{
+  
+    text-transform: uppercase;
+}
+
+.text-first{
+    margin-top: 0;
+    font-size: 65px;
+  
+}
+#shop-now-first{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    padding: 15px 20px;
+    background-color: #212806;
+    border: 1px solid #212806;
+    border-radius: 20px;
+    color: #FCF8F3;
+}
+
+.feedback{
+    display: flex;
+    width: 70%;
+    align-items:center;
+    justify-content: center;
+}
+.feedback > div{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+}
+.stars{
+    content: url("./images/stars.svg")
+}
+.feedback > p{
+    font-size: 54px;
+}
+
+.container-second{
+    width: 100%;
+display: flex;
+justify-content: center;
+align-items:center;
+flex-direction: column;
+}
