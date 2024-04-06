@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 header{
     display: flex;
@@ -16,21 +17,23 @@ header{
 
 .nav_menu{
     display: flex;
-    width: 60%;
+    width: 65%;
     align-items:center;
     justify-content: start;
     flex-direction: row;
 }
 
 nav{
-    width: 40%;
+    width: 25%;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-direction: row;
     
 }
 nav > a{
+    display: flex;
     text-decoration: none;
+    align-items:center;
     color: #000000;
 }
 
@@ -45,8 +48,63 @@ nav > a{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    width:10%;
+    align-items: center;
+    width:20%;
 }
+
+#Sign-up {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+#Log-in {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+#translate {
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 36px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
 
 .basket{
     display: flex;
@@ -59,6 +117,8 @@ nav > a{
 .container-first{
     width: 100%;
     background-repeat: no-repeat;
+    background-size: cover;
+
     background-image: url("./images/backgroundfirst.svg");
     height: 730px;
     display: flex;
@@ -66,9 +126,9 @@ nav > a{
 }
 
 .textForFirst{
-    width: 40%;
-    margin-left: 50px;
-    margin-bottom: 50px;
+    width: 30%;
+    margin-left: 74px;
+    margin-bottom: 116px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -78,11 +138,14 @@ nav > a{
 .title-first{
   
     text-transform: uppercase;
+    margin: 10px 0;
 }
 
 .text-first{
     margin-top: 0;
+    margin-bottom: 70px;
     font-size: 65px;
+
   
 }
 #shop-now-first{
@@ -111,14 +174,231 @@ nav > a{
 .stars{
     content: url("./images/stars.svg")
 }
-.feedback > p{
-    font-size: 54px;
+.feedback > div > p{
+   
+    font-size: 19px;
+}
+
+button{
+    cursor: pointer;
+}
+.Sustainability{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 200px;
+    height: 45px;
+    background-color:none;
+    border:1px solid black;
+    border-radius: 30px
+}
+
+.feedback > div{
+    margin-top: 10px;
+    margin-left: 60px;
+    width: 42%;
+    display: flex;
+    justify-content: space-between;
 }
 
 .container-second{
     width: 100%;
-display: flex;
-justify-content: center;
-align-items:center;
-flex-direction: column;
+    height:500px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    flex-direction: column;
 }
+
+.middle-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items:center;
+    font-size: 54px;
+    width: 60%;
+    text-align: center;
+    word-spacing: 3px;   
+  
+}
+
+.container-cards{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items:center;
+    margin-top: 290px;
+
+}
+
+.title-contaner{
+    font-size: 40px;
+    margin: 35px 0;
+    word-spacing: 2px;
+   
+}
+.text-title{
+    line-height: 150%;
+    word-spacing: 1px;
+    font-size: 15px;
+}
+
+#shop-all{
+    display: flex;
+    justify-content: space-around;
+    align-items:center;
+    width: 75%;
+    margin-right: 75px;
+    margin-bottom: 30px;
+    height: 47px;
+    background-color:#212806;
+    border:1px solid #212806;
+    border-radius:30px;
+    color:#FCF8F3
+
+}
+
+.text-and-button{
+    width: 20%;
+    height: 502px;
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+    margin-left: 70px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Arrows{
+    width: 85%;
+    margin-bottom: 8px;
+}
+
+#arrow-left{
+    border:none;
+    background-color:#ffffff;
+  
+}
+#arrow-right{
+    border:none;
+    background-color:#ffffff;
+}
+
+.container-slider{
+  
+    width: 80%;
+    display: flex;
+    justify-content: start;
+    align-items:center;
+    flex-direction: column;
+}
+
+.title-card{
+    font-size: 12px;
+    margin: 0;
+    text-transform: uppercase;
+}
+.name-card{
+    width: 90%;
+    line-height: 120%;
+    font-size: 23px;
+    word-spacing: 1px;
+    margin: 0;
+}
+.price{
+    font-size: 16px;
+    margin: 0;
+}
+
+.slider-images{
+    display: flex;
+    width: 95%;
+    flex-direction: row;
+    gap: 10px;
+   
+}
+
+.images{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    width: auto;
+    gap: 16px;
+    height: 450px;
+}
+
+.container-third{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    width: 100%;
+    height: 1032px;
+    margin-top: 139px;
+    
+}
+.container-third > div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 auto;
+    background-color: #F5EEE6;
+}
+.tortoes{
+    width: 720px;
+    height: 800px;
+    content:url("./images/tortoes.png")
+}
+
+.right-tortoes{
+
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+
+.text-for-tortoes{
+    font-size: 43px;
+    text-align: center;
+    line-height: 115%;
+    word-spacing: 4px;
+    width: 58%;
+}
+
+  .slider:before {
+    position: absolute;
+    content:url("./images/Sun.png");
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: #ffffff;
+  }
+  
+ 
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+    content:url("./images/moon.png");
+  }
+  
+
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
