@@ -11,7 +11,7 @@ header{
     padding: 10px 0;
     background-color:#FCF8F3;
 }
-.logo{
+#logo{
     content:url("./images/logo.svg")
 }
 
@@ -369,6 +369,187 @@ button{
     width: 58%;
 }
 
+
+.contaner-fourth{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    margin: 0 auto;
+    padding-top: 80px;
+}
+
+.header-shipping{
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.header-shipping > p{
+    text-align: center;
+    font-size: 54px;
+   
+}
+
+
+.cadrs-usa{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: row;
+    width: 92%;
+    
+    height: auto;
+}
+
+.cadrs-usa > div{
+    width: 302px;
+    height: 330px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    text-align: center;
+    align-items:center;
+    font-size: 25px;
+
+}
+
+.cadrs-usa > div > p{
+    width: 73%;
+}
+
+
+
+.Button-shop-now{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items:center;
+    background-color:#212806;
+    color:#F5EEE6;
+    margin-top: 70px;
+    width: 230px;
+    border: 1px solid #212806;
+    border-radius:20px;
+}
+
+.container-fives{
+    margin-top: 265px;
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+
+.container-fives > div{
+    width: 95%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.text-for-image > p:first-child{
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+
+.text-for-image > b{
+    font-size: 41px;
+}
+
+.text-for-image{
+    width: 34%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    justify-content: space-between;
+}
+
+.text-for-image > div{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    margin-top: 15px;
+ 
+}
+
+.text-for-image > div > p:first-child{
+    width: 96%;
+    word-spacing: 2px;
+    line-height: 200%;
+    margin-bottom: 5px;
+    
+}
+
+#read-article{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    width: 255px;
+    height: 45px;
+    border: 1px solid #000000;
+    background-color:#ffffff;
+    border-radius:20px;
+}
+
+.text-for-image > div > p:last-child{
+    width: 90%;
+    font-size: 17px;
+    word-spacing: 2px;
+    line-height: 200%;
+    margin-top: 0;
+}
+
+.image{
+    width: 600px;
+    height: 516px;
+    content:url("./images/happybirthday.png");
+}
+
+.container-sixes{
+    width: 100%;
+    margin-top: 190px;
+    height: auto;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+}
+.container-sixes > div{
+    width: 90.5%
+  
+}
+.container-sixes p{
+    font-size: 52px;
+    word-spacing: 10px;
+    margin-bottom: 65px;
+   
+}
+.Cards{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    width: 100%;
+}
+
+.Greeting{
+    
+    content:url("./images/greeting.png");
+}
+
+.Assorted{
+
+    content:url("./images/assorted.png");
+}
+.Notebooks{
+
+    content:url("./images/notebooks.png");
+}
+
   .slider:before {
     position: absolute;
     content:url("./images/Sun.png");
@@ -382,7 +563,7 @@ button{
   }
   
   input:checked + .slider {
-    background-color: #ffffff;
+    background-color: #727a98;
   }
   
  
@@ -402,3 +583,11 @@ button{
   .slider.round:before {
     border-radius: 50%;
   }
+
+.night-theme{
+    background-color:#310A31;
+    color:#50FFB1;
+}
+.night-text{
+    color:#50FFB1;
+}
