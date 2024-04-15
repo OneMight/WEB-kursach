@@ -585,7 +585,78 @@ button{
     background-image:url("./images/notebooks.png");
 }
 
+.container-sevens{
+width: 100%;
+height: auto;
+display: flex;
+justify-content: center;
+align-items:center;
+flex-direction: column;
+margin-top: 105px;
+}
 
+.water{
+    content: url("./images/waterblank.png");
+}
+
+.absolute-photos{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items:flex-start;
+    text-align: center;
+    margin-top: 150px;
+    position: relative;
+
+}
+.absolute-photos > p{
+    word-spacing: 8px;
+    font-size: 39px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.absolute-photos > img{
+    position: absolute;
+}
+
+.abs1{
+    top: 63px;
+    left: 95px;
+
+}
+
+.abs2{
+    top: 103px;
+    left: 282px;
+    z-index: -1;
+}
+
+.abs3{
+    top: 360px;
+    left: 95px;
+}
+
+.abs4{
+    top: 364px;
+    left: 648px;
+}
+
+.abs5{
+    top: 270px;
+    right: 460px;
+    z-index: -1;
+}
+
+.abs6{
+    top: 410px;
+    right: 160px;
+}
+
+.abs7{
+    top: 81px;
+    right: 98px;
+}
 
   .slider:before {
     position: absolute;
