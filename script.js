@@ -11,20 +11,28 @@ let password;
 
 function backgroundswitch(){
     if(buttonswitch.checked){
-       let a = document.querySelectorAll('nav > a');
+       
        document.body.classList.add("night-theme");
        header.classList.add("night-theme");
+       
         logo.style.content = "url(./images/logowhite.png)";
-        singup.classList.add("night-theme");
-        login.classList.add("night-theme");
+        singup.style.color = "#50FFB1";
+        singup.style.backgroundColor = "#310A31";
+        login.style.color = "#50FFB1";
+        login.style.backgroundColor = "#310A31";
         for (let elem of text) {
            elem.classList.add("night-text");
-           a.classList.add("night-text");
         }
-        for(let elem of box){
-            
-            elem.classList.add("night-theme");
+       
+       for(let i = 0; i < box.length; i++){
+        if(i%2 != 0){
+            box[i].classList.add("night-theme-second");
         }
+        else{
+            box[i].classList.add("night-theme");
+        }
+        
+       }
        
     }else {
         document.body.classList.remove("night-theme");

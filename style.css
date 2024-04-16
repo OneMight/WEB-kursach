@@ -572,16 +572,16 @@ button{
     font-size: 23px;
 }
 .Greeting{
-    
+    cursor: pointer;
     background-image:url("./images/greeting.png");
 }
 
 .Assorted{
-
+    cursor: pointer;
     background-image:url("./images/assorted.png");
 }
 .Notebooks{
-
+    cursor: pointer;
     background-image:url("./images/notebooks.png");
 }
 
@@ -593,6 +593,7 @@ justify-content: center;
 align-items:center;
 flex-direction: column;
 margin-top: 105px;
+
 }
 
 .water{
@@ -608,6 +609,15 @@ margin-top: 105px;
     margin-top: 150px;
     position: relative;
 
+}
+
+.map{ 
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    margin-top: 820px;
+  
 }
 .absolute-photos > p{
     word-spacing: 8px;
@@ -658,6 +668,117 @@ margin-top: 105px;
     right: 98px;
 }
 
+footer{
+    display: flex;
+    justify-content: center;
+    align-items:flex-end;
+    width: 100%;
+    background-color:#212806;
+    margin-top: 63px;
+}
+
+.container-footer{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    width:100%;
+    margin-top: 64px;
+}
+
+.footer-nav-menu a {
+    color:#FCF8F3;
+    text-decoration: none;
+  
+}
+
+.footer-nav-menu p {
+    color:#FCF8F3;
+    text-decoration: none;
+}
+
+.links{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.links > div:last-child{
+    display: flex;
+    width:50%;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+.links > div  a{
+    font-size: 15px;
+    color:#ffffff;
+    text-decoration: none;
+}
+
+.links > div > div{
+    display: flex;
+    width: 55%;
+    align-items:center;
+    justify-content: space-around;
+}
+
+.logo-footer{
+    content:url("./images/logowhite.png");
+}
+
+.footer-nav-menu{
+    margin-top: 45px;
+    width: 96.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-nav-menu  p{
+    width: 97%;
+    padding-bottom: 35px;
+    font-size: 18px;
+    border-bottom: 1px solid #FCF8F3;
+} 
+
+.footer-links{
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: space-between;
+    width: 97%;
+    margin-top: 100px;
+}
+
+.footer-links{
+    color:#FCF8F3;
+    text-decoration: none;
+}
+
+.footer-links > div{
+    width: 22%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.footer-links a{
+    color:#FCF8F3;
+    text-decoration: none;
+}
+
+.footer-nav-menu > div{
+    width: 23.5%;
+    height: 249px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
   .slider:before {
     position: absolute;
     content:url("./images/Sun.png");
@@ -695,6 +816,10 @@ margin-top: 105px;
 .night-theme{
     background-color:#310A31;
     color:#50FFB1;
+}
+.night-theme-second{
+    background-color:#4A5240;
+    color:#1e99b7;
 }
 .night-text{
     color:#50FFB1;
