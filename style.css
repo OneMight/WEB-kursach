@@ -12,7 +12,8 @@ header{
     background-color:#FCF8F3;
 }
 #logo{
-    content:url("./images/logo.svg")
+    content:url("./images/logo.svg");
+    cursor:pointer;
 }
 
 .nav_menu{
@@ -50,6 +51,70 @@ nav > a{
     justify-content: space-around;
     align-items: center;
     width:20%;
+}
+
+.burger-menu{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 50px;
+    justify-content: space-between;
+    transition: 0.2s all;
+    flex-direction: column;
+    gap: 10px;
+    background-color:#ffffff;
+    font-size: 20px;
+    color:#000000;
+}
+#burgerLog{
+    color:#000000;
+    display: block;
+    text-align: center;
+    background-color: #F9E9E0;
+    width: 45%;
+    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid  #F9E9E0;
+    border-radius: 10px;
+}
+#burgerSign{
+    color:#000000;
+    display: block;
+    text-align: center;
+    background-color: #F9E9E0;
+    width: 45%;
+    padding: 10px 0;
+    text-decoration: none;
+    border: 1px solid  #F9E9E0;
+    border-radius: 10px;
+}
+.log{
+    margin-top: 20px;
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+.theme{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.burger-menu > a{
+    color:#000000;
+    text-align: center;
+    text-decoration: none;
+    width: 90%;
+    background-color:#F9E9E0;
+    padding: 10px 0;
+    border: 1px solid  #F9E9E0;
+    border-radius: 10px;
+    
 }
 
 #Sign-up {
@@ -279,20 +344,22 @@ button{
 #arrow-left{
     border:none;
     background-color:#ffffff;
-  
+    transform: translateY(-50%);
 }
 #arrow-right{
     border:none;
     background-color:#ffffff;
+    transform: translateY(-50%);
 }
 
 .container-slider{
-  
+display: none;
     width: 80%;
-    display: flex;
+    /* display: flex; */
     justify-content: start;
     align-items:center;
     flex-direction: column;
+    position: relative;
 }
 
 .title-card{
@@ -317,6 +384,7 @@ button{
     width: 95%;
     flex-direction: row;
     gap: 10px;
+    transition: transform 0.5s ease-in-out;
    
 }
 
@@ -339,7 +407,7 @@ button{
     margin-top: 139px;
     
 }
-.container-third > div{
+.tortoes-container{
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -555,6 +623,7 @@ button{
     text-align: center;
     background-color:#F9E9E0;
     width: 100%;
+    padding: 10px 0;
     font-size: 23px;
 }
 
@@ -562,6 +631,7 @@ button{
     text-align: center;
     background-color:#E9EDEE;
     width: 100%;
+    padding: 10px 0;
     font-size: 23px;
 }
 
@@ -569,8 +639,15 @@ button{
     text-align: center;
     background-color:#F5EFEF;
     width: 100%;
+    padding: 10px 0;
     font-size: 23px;
 }
+
+.weight{
+    font-weight: 800;
+    font-size: 41px;
+}
+
 .Greeting{
     cursor: pointer;
     background-image:url("./images/greeting.png");
@@ -815,12 +892,17 @@ footer{
 
 .night-theme{
     background-color:#310A31;
-    color:#50FFB1;
+
 }
-.night-theme-second{
-    background-color:#4A5240;
-    color:#1e99b7;
-}
+
 .night-text{
     color:#50FFB1;
+
+}
+#menu_toogle{
+    position: absolute;
+    opacity: 0;
+    }
+.btn{
+    display: none;
 }

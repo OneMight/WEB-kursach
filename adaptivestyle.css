@@ -1,0 +1,356 @@
+@media screen and (max-width: 1440px){
+    main{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .nav_menu{
+        width: 50%;
+        align-items:center;
+        justify-content: center;
+    }
+    nav{
+        width: 70%;
+        justify-content: space-around;
+    }
+    .header-right{
+        width: 30%;
+    }
+    .textForFirst{
+        width: 50%;
+    }
+    .feedback > div{
+        width: 100%;
+    }
+    .text-for-tortoes{
+        width: 100%;
+    }
+    .tortoes{
+        width: 600px;
+   
+    }
+    .container-fives > div{
+        flex-direction: column;
+        align-items:center;
+       
+    }
+    .text-for-image{
+        justify-content: center;
+        align-items:center;
+        width: 100%;
+        padding-left: 0;
+    }
+    .container-sixes > div > p{
+        text-align: center;
+    }
+    .image{
+        padding-right: 0;
+    }
+    .Cards{
+        flex-wrap: wrap;
+        align-items:center;
+        justify-content: center;
+        gap: 20px;
+    }
+    .abs4{
+        display: none;
+    }
+    .abs6{
+        display: none;
+    }
+    .abs7{
+        display: none;
+    }
+ 
+    .weight{
+        text-align: center;
+    }
+    .text-for-image > div{
+        width: auto;
+        text-align: center;
+        align-items:center;
+    }
+    .text-for-image > div > p:first-child{
+        width: 90%;
+    }
+    .text-for-image > p:first-child{
+        text-align: center;
+    }
+    .cadrs-usa{
+        flex-wrap: wrap;
+    }
+    .links{
+        flex-direction: column;
+        width: 100%;
+    }
+    .links > div:last-child{
+        margin-top: 20px;
+        width: 100%;
+        align-items:center;
+        justify-content: center;
+    }
+    .footer-nav-menu{
+       display: grid;
+       grid-template-columns: repeat(2,0.5fr);
+       grid-template-rows: repeat(2,0.5fr);
+       justify-items: center;
+    }
+    .footer-nav-menu > div{
+        width: 70%;
+    }
+    .footer-links{
+        text-align: center;
+       
+        gap: 30px;
+    }
+    .footer-links  a{
+        width: 130%;
+    }
+}
+
+@media screen and (max-width: 900px){
+    header{
+       width: 100%;
+        justify-content: start;
+    
+    }
+    #logo{
+        padding-left: 30px;
+    }
+    .nav_menu{
+        display: none;
+    }
+    .header-right{
+        display: none;
+    }
+    .image{
+        display: none;
+    }
+    .tortoes-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items:center;
+    }
+    .right-tortoes{
+        
+        width: 100%;
+    }
+    #menu_toogle:checked ~ .burger-menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:center;
+        opacity: 1;
+    }
+    
+    .btn > span{
+        transition: all 0.2s;
+    }
+    
+    .btn{
+        display: flex; 
+        align-items: center; 
+        position: absolute;
+        top: 18px;
+        right: 70px;
+        width: 26px;
+        height: 26px;
+        cursor: pointer;
+        z-index: 1;
+    }
+    
+      .btn > span,
+      .btn > span::before,
+      .btn > span::after {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        background-color: #616161;
+     
+    }
+    .btn > span::before {
+        content: '';
+        top: -8px;
+    }
+    .btn > span::after {
+        content: '';
+        top: 8px;
+    }
+    
+    #menu_toogle:checked ~ .btn > span {
+        transform: rotate(45deg);
+    }
+    #menu_toogle:checked ~ .btn > span::before {
+        top: 0;
+        transform: rotate(0);
+    }
+    #menu_toogle:checked ~ .btn > span::after {
+        top: 0;
+        transform: rotate(90deg);
+    }
+}
+@media screen and (max-width: 768px){
+   #shop-now-first{
+    width: 192px;
+   }
+   .text-first{
+    width: 150%;
+   }
+   .feedback > div{
+    width: 600px;
+    margin-left: 0;
+   }
+   .middle-text{
+    width: 50%;
+    margin-top: 135px;
+   }
+   .text-and-button{
+    width: 40%;
+   }
+  .container-third{
+    margin-top: 90px;
+  }
+  .tortoes{
+    position: relative;
+    width: 100%;
+  }
+  .right-tortoes{
+    width: 60%;
+    position: absolute;
+    top:  2500px;
+    background-color:none
+  }
+  .Button-shop-now{
+    width: 22%;
+    margin-top: 25px;
+  }
+  .container-fives{
+    margin-top: 120px;
+  }
+  .text-for-image{
+    width: 80%;
+    align-items:flex-start
+  }
+  .text-for-image > div{
+    margin-top: 0;
+  }
+  .weight{
+    margin-bottom: 10px;
+  }
+  #read-article{
+    width: 30%;
+  }
+  .container-sixes{
+    margin-top: 60px;
+  }
+  .Cards > div{
+   width: 450px;
+  }
+  .container-sevens{
+    display: none;
+  }
+  .map{
+    margin-top: 50px;
+  }
+
+}
+
+@media screen and (max-width: 500px){
+    .container-first{
+        width: 100%;
+        align-items:center;
+    }
+    .text-first{
+        width: 80%;
+        text-align: center;
+        font-size: 40px; 
+        margin-bottom: 150px;
+    }
+    .textForFirst{
+      width: 100%;
+        margin: 0;
+        justify-content: space-around;
+        align-items:center;
+    }
+    .title-first{
+        margin-bottom: 100px;
+    }
+   .feedback > div{
+    display: none;
+   }
+   .middle-text{
+    width: 100%;
+   }
+   .middle-text > p{
+    font-size: 50px;
+    margin-top: 10px;
+   }
+   .text-and-button{
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+   }
+   #shop-all{
+    margin-left: 50px;
+   }
+   .container-third{
+    margin-top: 0px;
+   }
+   .right-tortoes{
+    width: 100%;
+    top: 2270px;
+   }
+   .text-for-tortoes{
+    margin-top: 5px;
+   }
+   .contaner-fourth{
+    padding-top: 0;
+   }
+   .Button-shop-now{
+    margin-top: 45px;
+    width: 175px;
+   }
+   .text-for-image{
+    width: 100%;
+    text-align: center;
+    align-items:center;
+   }
+   .text-for-image > p:first-child{
+    text-align: center;
+   }
+   #read-article{
+    width: 190px;
+   margin-top: 20px;
+   }
+   .container-sixes > div > p{
+    margin-bottom: 0;
+   }
+   .footer-nav-menu{
+    grid-template-columns: repeat(1,0.5fr);
+    grid-template-rows: repeat(4,0.5fr);
+   }
+   .footer-nav-menu > div{
+    width: 100%;
+   }
+   .links > div:last-child{
+    width: 100%;
+   }
+   .links > div > div{
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 15px;
+   }
+   .footer-links{
+    flex-direction: column;
+    align-items:flex-start
+   }
+   .footer-links > div{
+    align-items:flex-start;
+    width: 80%;
+   }
+   .footer-links a{
+    width: 70%;
+   }
+}

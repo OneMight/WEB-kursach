@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptivestyle.css">
     <title>Twiqs</title>
 </head>
 <body>
     <header>
            <div id="logo">
+            <a href="/index.html">a</a>
             </div>
             <div class="nav_menu ">
                 <nav>
@@ -31,7 +33,7 @@
                 <button id="Log-in">Log in</button>
                 <div class="toogle-switch">
                     <label class="switch">
-                        <input type="checkbox" id="check" onclick="backgroundswitch()">
+                        <input type="checkbox" id="check">
                         <span class="slider round"></span>
                       </label>
                 </div>
@@ -42,12 +44,35 @@
                     <p>0<p>
                 </div>
             </div>
+            <input type="checkbox" id="menu_toogle">
+            <label class="btn" for="menu_toogle">
+            <span></span>
+            </label>
+            <div class="burger-menu">
+                <div class="log">
+                    <a href="" id="burgerLog">Log in</a>
+                    <a href="" id="burgerSign"> Sign up</a>
+                </div>
+                <a href="#">Shop</a>
+                <a href="#">About</a>
+                <a href="#">Sustainability</a>
+                <div class="theme">
+                    <button id="translate">EN</button>
+                    <div class="toogle-switch">
+                        <label class="switch">
+                            <input type="checkbox" id="check2">
+                            <span class="slider round"></span>
+                          </label>
+                    </div>
+                </div>
+                
+            </div>
     </header>
     <main>
         <div class="container-first">
             <div class="textForFirst">
               
-                    <span class="title-first">the eco-friendly way to</span>
+                <span class="title-first">the eco-friendly way to</span>
                     <span class="text-first">
                         Give the best wishes to your loved ones.
                     </span>
@@ -162,15 +187,15 @@
                 </div>
             </div>
         </div>
-        <div class="container-third box">
-            <div class="box">
+        <div class="container-third">
+            <div class="tortoes-container box">
                 <div class="tortoes">
                 </div>
                 <div class="right-tortoes">
                     <div>
                         <img src="./images/stars.svg" alt="">
                     </div>
-                    
+                  
                     <p class="text-for-tortoes"> 
                         Beautiful cards and very high quality.
                         They were shipped to me very quickly and
@@ -218,7 +243,7 @@
             <div>
                 <div class="text-for-image">
                     <p>Inspiration</p>
-                    <b>The Ultimate Guide: What to Write in a Birthday Card</b>
+                    <p class="weight">The Ultimate Guide: What to Write in a Birthday Card</p>
                     <div>
                         <p><span style="font-weight: 600;">Celebrate the life you have!</span> Birthdays are the one
                              time of year we get to celebrate those closest to us 
@@ -236,7 +261,7 @@
                         </p>
                     </div>
                     <button id="read-article">
-                        <p>Read article</p>
+                       <span>Read article</span>
                         <img src="./images/rowblack.png" alt="">
                     </button>
                 </div>
@@ -251,17 +276,17 @@
                 <div class=Cards>
                     <div class="Greeting">
                         <div>
-                            <p>Greeting Cards</p>
+                            <span>Greeting Cards</span>
                         </div>
                     </div>
                     <div class="Assorted">
                         <div>
-                            <p>Assorder Card Sets</p>
+                            <span>Assorder Card Sets</span>
                         </div>
                     </div>
                     <div class="Notebooks">
                         <div>
-                            <p>Notebooks</p>
+                            <span>Notebooks</span>
                         </div>
                     </div>
                 </div>
@@ -329,12 +354,12 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <p>© 2021 Twigs Paper. All Rights Reserved.</p>
+                   <span>© 2021 Twigs Paper. All Rights Reserved.</span>
                     <div>
                         <a href="">Privacy Policy</a>
                         <a href="">Terms & Conditions</a>
                     </div>
-                    <p>Built by The Papestielliz</p>
+                   <span>Built by The Papestielliz</span>
                 </div>
             </div>
         </footer>
