@@ -15,8 +15,9 @@ buttonswitch.addEventListener('click',function(){
        
         document.body.classList.add("night-theme");
         header.classList.add("night-theme");
-        
-         logo.style.content = "url(./images/logowhite.png)";
+        arrowleft.style = "filter: invert(1)";
+        arrowright.style = "filter: invert(1)";
+         logo.style = "filter: invert(1)";
          singup.style.color = "#50FFB1";
          singup.style.backgroundColor = "#310A31";
          login.style.color = "#50FFB1";
@@ -33,7 +34,9 @@ buttonswitch.addEventListener('click',function(){
      }else {
          document.body.classList.remove("night-theme");
          header.classList.remove("night-theme");
-         logo.style.content = "url(./images/logo.svg)";
+         arrowleft.style = "filter: invert(0)";
+        arrowright.style = "filter: invert(0)";
+         logo.style = "filter: invert(0)";
          singup.style.color = "#000000";
          singup.style.backgroundColor = "#FCF8F3";
          login.style.color = "#000000";
@@ -52,28 +55,30 @@ buttonswitch.addEventListener('click',function(){
 let arrowleft = document.getElementById("arrow-left");
 let arrowright = document.getElementById("arrow-right");
 let slider = document.querySelector(".slider-images");
-const slideWidth = slider.clientWidth;
+const slideWidth = 9;
 let currentPosition = 0;
-
+let i = 0;
 arrowright.addEventListener('click',function(){
-
-    if (currentPosition === -(slideWidth * (slider.childElementCount - 1))) {
-        currentPosition = 0;
-      } else {
-        currentPosition -= slideWidth;
-      }
-      slider.style.transform = `translateX(${currentPosition}px)`;
+  console.log(slideWidth)
+    if(i < slideWidth - 1){
+      i++
+    }
+    else{
+      i = 0
+    }
+    slider.style.transform = `translateX(-${i*328}px)`;
 }
 
 )
 arrowleft.addEventListener('click',function(){
 
-if (currentPosition === 0) {
-    currentPosition = -(slideWidth * (slider.childElementCount - 1));
-  } else {
-    currentPosition += slideWidth;
+  if(i > 0){
+    i--;
   }
-  slider.style.transform = `translateX(${currentPosition}px)`;
+  else{
+    i = slideWidth -1;
+  }
+  slider.style.transform = `translateX(-${i*328}px)`;
 }
 )
 
