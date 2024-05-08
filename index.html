@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="set-cookie">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="adaptivestyle.css">
     <title>Twiqs</title>
@@ -12,13 +13,13 @@
            <div id="logo">
             <a href="/index.html">a</a>
             </div>
-            <div class="nav_menu ">
+            <div class="nav_menu">
                 <nav>
-                    <a href="#">
+                    <a href="./shopall.html">
                         <p>Shop</p>
                         <img src="./images/mark.svg" alt="">
                     </a>
-                    <a href="#">
+                    <a href="#qqq">
                         <p>About</p>
                         <img src="./images/mark.svg" alt="">
                     </a>
@@ -31,6 +32,8 @@
                 <button id="translate">EN</button>
                 <button id="Sign-up">Sign up</button>
                 <button id="Log-in">Log in</button>
+                <p class="username"></p>
+                <button id="logout">Log out</button>
                 <div class="toogle-switch">
                     <label class="switch">
                         <input type="checkbox" id="check">
@@ -50,10 +53,10 @@
             </label>
             <div class="burger-menu">
                 <div class="log">
-                    <a href="" id="burgerLog">Log in</a>
-                    <a href="" id="burgerSign"> Sign up</a>
+                   <button id="burgerLog">Log in</button>
+                    <button id="burgerSign">Sign up</button>
                 </div>
-                <a href="#">Shop</a>
+                <a href="shopall.html">Shop</a>
                 <a href="#">About</a>
                 <a href="#">Sustainability</a>
                 <div class="theme">
@@ -62,13 +65,50 @@
                         <label class="switch">
                             <input type="checkbox" id="check2">
                             <span class="slider round"></span>
-                          </label>
+                        </label>
                     </div>
                 </div>
-                
             </div>
     </header>
     <main>
+        <div class="Login">
+            <div>
+                <b>Log in</b>
+                
+                    <div class="login-form">
+                        <label for="Logup"><b>Account Name</b></label>
+                        <input id="Logup" type="text" placeholder="Enter Account name" name="Account" required>
+                        <label for="pws"><b>Password</b></label>
+                        <input id="PasswordLog" type="password" placeholder="Enter Password" required>
+                        <button id = "log"><span>Log in</span></button>
+                    </div>
+                
+                
+            </div>
+        </div>
+        <div class="Register">
+            <div>
+                <b>Sing up</b>
+                <form>
+                    <div class="reg-form">
+                        <label for="Email"><b>Email</b></label>
+                        <input id="Email" type="text" placeholder="Enter email" name="Email" required>
+                        <label for="FisrtName"><b>First Name</b></label>
+                        <input type="text" placeholder="Enter First Name" name="FistName" required>
+                        <label for="LastName"><b>Last Name</b></label>
+                        <input type="text" placeholder="Enter Last Name" name="LastName" required>
+                        <label for="LastName"><b>Father Name</b></label>
+                        <input type="text" placeholder="Enter Father Name" name="FatherName" >
+                        <label for="pws"><b>Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="passwod" required>
+                        <label for="pws"><b>Confirm Password</b></label>
+                        <input type="password" placeholder="Enter Password" name="Comfpasswod" required>
+                        <button id = "sign"><span>Sign up</span></button>
+                    </div>
+                </form>
+                
+            </div>
+        </div>
         <div class="container-first">
             <div class="textForFirst">
               
@@ -187,7 +227,7 @@
                 </div>
             </div>
         </div>
-        <div class="container-third">
+        <div class="container-third" id="qqq">
             <div class="tortoes-container box">
                 <div class="tortoes">
                 </div>
@@ -324,6 +364,7 @@
                         </div>
                     </div>
                 </div>
+              
                 <div class="footer-nav-menu">
                     <div>
                         <p>Shop</p>

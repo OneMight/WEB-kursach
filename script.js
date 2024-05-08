@@ -5,11 +5,61 @@ let header = document.querySelector('header');
 let logo = document.getElementById('logo');
 let singup = document.getElementById('Sign-up');
 let login = document.getElementById('Log-in');
+let main = document.querySelector('main');
+let loginmenu = document.querySelector('.Login');
+let registrmenu = document.querySelector('.Register');
 
 let username = '';
 let password = '';
 
+singup.addEventListener('click', function(){
+  registrmenu.style.transform = 'translateX(-2850px)';
+  loginmenu.style.transform = 'translateX(-2150px)';
+})
+const buttonshop = document.getElementById('shop-now-first');
+buttonshop.addEventListener('click', function () {
+  if (username === '' || username !== 'admin') {
+    loginmenu.style.transform = 'translateX(2150px)';
+    
+  } else {
+    window.location = 'shopall.html';
+  }
+});
+const buttonshopall = document.getElementById('shop-all');
+buttonshopall.addEventListener('click',function(){
+  if(username === '' && username !='admin'){
+    loginmenu.style = 'transform: translateX(2150px)';
+  
+  }
+  else{
+    window.location = 'shopall.html';
+  }
+})
+const shopnow = document.querySelector('.Button-shop-now');
+shopnow.addEventListener('click',function(){
+  if(username === '' && username !='admin'){
+    loginmenu.style = 'transform: translateX(2150px)';
+   
+    
+  }
+  else{
+    window.location = 'shopall.html';
+  }
+})
 
+login.addEventListener('click', function(){
+  loginmenu.style = 'transform: translateX(2150px)';
+  registrmenu.style.transform = 'translateX(2850px)';
+  
+})
+
+let login_burger = document.getElementById('burgerLog');
+login_burger.addEventListener('click', function(){
+  loginmenu.style = 'transform: translateX(2300px)';
+
+  
+})
+//При нажатии на кнопеку логин выскакивает модальное окно что ты лох попущенный
 buttonswitch.addEventListener('click',function(){
     if(buttonswitch.checked){
        
@@ -59,7 +109,7 @@ const slideWidth = 9;
 let currentPosition = 0;
 let i = 0;
 arrowright.addEventListener('click',function(){
-  console.log(slideWidth)
+
     if(i < slideWidth - 1){
       i++
     }
@@ -91,4 +141,48 @@ burger_menu_toogle.addEventListener('click', function(){
   else{
     burger_menu.display = "none";
   }
+})
+
+//Отправка формы регистрации
+const Login = document.getElementById('log');
+Login.addEventListener('click', function(){
+  let logup = document.getElementById("Logup").value;
+  let userpassword = document.getElementById("PasswordLog").value;
+  username = logup;
+  password = userpassword
+  let logining = false;
+ let url = 'LoginAndPasswods.json';
+ fetch(url)
+ .then(response => response.json())
+ .then(result => { for(let element of result){
+  if(element.login == username && element.password == password){
+    logining = true;
+    setLoginNameOnSite(username);
+    
+  }
+  if(!logining){
+    alert('Неправильный логин или пароль');
+  }
+ }});
+ }
+);
+let logut = document.getElementById('logout');
+let pUsername = document.querySelector('.username');
+function setLoginNameOnSite(username){
+ 
+  pUsername.textContent = username;
+  pUsername.style.display = "block";
+  logut.style = "display: flex";
+  loginmenu.style = 'transform: translateX(-2150px)';
+  singup.style.display = 'none';
+  login.style.display = "none";
+}
+logut.addEventListener('click',function(){
+  location.reload();
+  username = '';
+  password = '';
+  singup.style.display = 'flex';
+  login.style.display = "flex";
+  pUsername.style.display = "none";
+  logut.style = "display: none";
 })

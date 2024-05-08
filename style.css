@@ -1,3 +1,6 @@
+html{
+    scroll-behavior: smooth;
+}
 body{
     margin: 0;
     overflow-x: hidden;
@@ -10,11 +13,125 @@ header{
     flex-direction: row;
     padding: 10px 0;
     background-color:#FCF8F3;
+    position: relative;
 }
 #logo{
     content:url("./images/logo.svg");
     cursor:pointer;
 }
+main{
+    position: relative;
+}
+.Login{
+    z-index: 4;
+    position: fixed;
+    top: 200px;
+    right: 2500px;
+    display: flex;
+    width: 50%;
+    height: auto;
+    justify-content: center;
+    flex-direction: column;
+    align-items:center;
+    background-color:#212806;
+    color:#F9E9E0;
+    border: 1px solid #212806;
+    border-radius:20px;
+    transition: all, 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
+}
+.Login > div{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.Login > div > b{
+    padding: 30px 0;
+    font-size: 30px;
+}
+.login-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 200px;
+    font-size: 30px;
+    padding: 30px 0;
+}
+.Register{
+    z-index: 4;
+    position: fixed;
+   top: 50px;
+    right: -2500px;
+    display: flex;
+    width: 50%;
+    height: 650px;
+    flex-direction: column;
+    align-items:center;
+    background-color:#212806;
+    color:#F9E9E0;
+    border: 1px solid #212806;
+    border-radius:20px;
+    transition: all, 0.5s;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
+}
+.Register > div{
+    display: flex;
+    align-items:center;
+    justify-content: space-around;
+    flex-direction: column;
+    
+}
+.Register > div > b{
+    padding: 30px 0;
+    font-size: 30px;
+}
+.reg-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 510px;
+    font-size: 30px;
+    padding: 30px 0;
+}
+
+
+input[type=text],input[type=password]{
+    width: 120%;
+    font-size: 22px;
+    color:#000000;
+    background-color:#E9EDEE;
+    border: 1px solid #E9EDEE;
+    border-radius: 20px;
+    text-align: center;
+}
+
+#log{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color:#E9EDEE;
+    border: 1px solid #E9EDEE;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+#sign{
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+    background-color:#E9EDEE;
+    border: 1px solid #E9EDEE;
+    border-radius: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
 
 .nav_menu{
     display: flex;
@@ -52,8 +169,23 @@ nav > a{
     align-items: center;
     width:20%;
 }
-
+.username{
+    display: none;
+    font-size: 20px;
+    margin: 0;
+}
+#logout{
+    display: none;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
 .burger-menu{
+    z-index: 4;
     display: none;
     position: absolute;
     width: 100%;
@@ -295,6 +427,7 @@ button{
     justify-content: space-between;
     align-items:center;
     margin-top: 290px;
+    overflow-x: hidden;
 
 }
 
@@ -321,7 +454,8 @@ button{
     background-color:#212806;
     border:1px solid #212806;
     border-radius:30px;
-    color:#FCF8F3
+    color:#FCF8F3;
+    text-decoration:none;
 
 }
 
