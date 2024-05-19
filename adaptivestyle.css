@@ -112,11 +112,11 @@
 @media screen and (max-width: 900px){
     header{
        width: 100%;
-        justify-content: start;
+        justify-content: space-around;
     
     }
-    #logo{
-        padding-left: 30px;
+    .toogle-switch{
+        margin-right: 50px;
     }
     .nav_menu{
         display: none;
@@ -153,7 +153,7 @@
         align-items: center; 
         position: absolute;
         top: 18px;
-        right: 70px;
+        right: 20px;
         width: 26px;
         height: 26px;
         cursor: pointer;
@@ -204,10 +204,13 @@
    }
    .middle-text{
     width: 50%;
-    margin-top: 135px;
+    margin-top: 100px;
    }
    .text-and-button{
     width: 40%;
+   }
+   .container-second{
+    height: auto;
    }
   .container-third{
     margin-top: 90px;
@@ -219,8 +222,19 @@
   .right-tortoes{
     width: 60%;
     position: absolute;
-    top:  2500px;
     background-color:none
+  }
+  .text-and-button{
+    padding: 0 20px;
+  }
+  .container-slider{
+    width: 100%;
+  }
+  #shop-all{
+    width: 200px;
+  }
+  .container-cards{
+    margin-top: 100px;
   }
   .Button-shop-now{
     width: 22%;
@@ -262,6 +276,16 @@
         width: 100%;
         align-items:center;
     }
+    
+      .container-slider{
+        width: 100%;
+    }
+    .Arrows{
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        margin-top: 40px;
+    }
     .text-first{
         width: 80%;
         text-align: center;
@@ -288,19 +312,25 @@
     margin-top: 10px;
    }
    .text-and-button{
-    width: 100%;
-    margin: 0;
-    padding-left: 20px;
-   }
+    text-align: center;
+    justify-content: space-around;
+    width: 95%;
+  }
+  .container-cards{
+    flex-direction: column;
+  }
+  .text-title{
+    width: 95%;
+  }
    #shop-all{
-    margin-left: 50px;
+    margin-left: 100px;
    }
    .container-third{
     margin-top: 0px;
    }
    .right-tortoes{
     width: 100%;
-    top: 2270px;
+    top: 250px;
    }
    .text-for-tortoes{
     margin-top: 5px;

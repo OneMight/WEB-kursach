@@ -18,14 +18,14 @@ header{
 
 .nav_menu{
     display: flex;
-    width: 65%;
+    width: 50%;
     align-items:center;
     justify-content: start;
     flex-direction: row;
 }
 
 nav{
-    width: 25%;
+    width: 40%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -38,13 +38,7 @@ nav > a{
     color: #000000;
 }
 
-.search-photo{
-    content:url("./images/search.svg")
-}
 
-.shoping{
-    content: url("./images/shoping.svg")
-}
 .header-right{
     display: flex;
     flex-direction: row;
@@ -63,7 +57,7 @@ nav > a{
     transition: 0.2s all;
     flex-direction: column;
     gap: 10px;
-    background-color:#ffffff;
+    background-color:#212806;
     font-size: 20px;
     color:#000000;
 }
@@ -383,6 +377,27 @@ footer{
     justify-content: space-between;
     align-items: flex-start;
     flex-direction: column;
+}
+
+#logout{
+    display: none;
+    width: auto;
+    height: auto;
+    font-size: 17px;
+    margin: 0;
+    border:none;
+    background-color: #FCF8F3;
+    cursor: pointer;
+}
+
+.night-theme{
+    background-color:#310A31;
+
+}
+
+.night-text{
+    color:#50FFB1;
+
 }
 
 @media screen and (max-width:1700px) {

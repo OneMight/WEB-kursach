@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="./ArticleStyle.css">
+    
     <link rel="stylesheet" href="adaptivestyle.css">
     <title>Read article</title>
 </head>
@@ -12,62 +14,69 @@
         <a href="index.html">
             <div id="logo"></div>
         </a>
-         <div class="nav_menu ">
-             <nav>
-                 <a href="#">
-                     <p>Shop</p>
-                     <img src="./images/mark.svg" alt="">
-                 </a>
-                 <a href="#">
-                     <p>About</p>
-                     <img src="./images/mark.svg" alt="">
-                 </a>
-                 <a href="#">
-                     <p>Sustainability</p>
-                 </a>
-             </nav>
-         </div>
-         <div class="header-right">
-             <button id="translate">EN</button>
-             <button id="Sign-up">Sign up</button>
-             <button id="Log-in">Log in</button>
-             <div class="toogle-switch">
-                 <label class="switch">
-                     <input type="checkbox" id="check">
-                     <span class="slider round"></span>
-                   </label>
-             </div>
-             <div class="search-photo">
-             </div>
-             <div class="basket">
-                 <div class="shoping"></div>
-                 <p>0<p>
-             </div>
-         </div>
-         <input type="checkbox" id="menu_toogle">
-         <label class="btn" for="menu_toogle">
-         <span></span>
-         </label>
-         <div class="burger-menu">
-             <div class="log">
-                 <a href="" id="burgerLog">Log in</a>
-                 <a href="" id="burgerSign"> Sign up</a>
-             </div>
-             <a href="shopall.html">Shop</a>
-             <a href="#">About</a>
-             <a href="#">Sustainability</a>
-             <div class="theme">
-                 <button id="translate">EN</button>
-                 <div class="toogle-switch">
-                     <label class="switch">
-                         <input type="checkbox" id="check2">
-                         <span class="slider round"></span>
-                       </label>
-                 </div>
-             </div>
-             
-         </div>
- </header>
+            <div class="nav_menu">
+                <nav>
+                    <a href="shopall.html">
+                        <p i18n="shop" class=" i18n">Shop</p>
+                        <img src="./images/mark.svg" alt="">
+                    </a>
+                    <a href="ReadArticle.html">
+                        <p i18n ="about" class="i18n">About</p>
+                        <img src="./images/mark.svg" alt="">
+                    </a>
+                    <a href="Questions.html">
+                        <p i18n ="sustainability" class="i18n">Sustainability</p>
+                    </a>
+                </nav>
+            </div>
+            <select name="" id="languageSelect">
+                <option value="en" id="translateEN" select>en</option>
+                <option value="ru" id="translateRU">ru</option>
+            </select>
+            <div class="toogle-switch">
+                <label class="switch">
+                    <input type="checkbox" id="check">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+            
+            <div class="header-right">
+                <p class="username"></p>
+                <button id="Sign-up"><span i18n="signup" class="i18n signup">Sign up</span> </button>
+                <button id="Log-in"> <span i18n="login" class="i18n login">Log in</span></button>
+               
+                <button id="logout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                
+                <div class="search-photo">
+                    <img src="./images/search.svg" alt="">
+                </div>
+                <div class="basket">
+                    <div class="shoping">
+                        <img src="./images/shoping.svg" alt="">
+                    </div>
+                    <p>0<p>
+                </div>
+            </div>
+            <input type="checkbox" id="menu_toogle">
+            <label class="btn" for="menu_toogle">
+            <span></span>
+            </label>
+            <div class="burger-menu">
+                <p class="username"></p>
+                <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                <div class="log">
+                   <button id="burgerLog"><span i18n="login" class="i18n login">Log in</span> </button>
+                    <button id="burgerSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
+                </div>
+               
+                <a href="shopall.html" i18n="shop" class="i18n shop">Shop</a>
+                <a href="#" i18n="about" class="i18n about">About</a>
+                <a href="#" i18n="sustainability" class="i18n sustainability">Sustainability</a>
+                <div class="theme">
+                    </div>
+                </div>
+            </div>
+    </header>
  <main>
     <div class="first-container box">
         <div class="content-first">
@@ -76,56 +85,56 @@
             </div>
             <div class="Readinf">
                 <div class="title">
-                    <p>Inspiration</p>
-                    <p class="weight">
+                    <p i18n="grandCanyonYosemiteArches14" class="i18n">Inspiration</p>
+                    <p i18n="grandCanyonYosemiteArches15" class="weight i18n">
                         The Ultimate Guide: What to Write in a Birthday Card
                     </p>
                 </div>
-                    <p class="first-text">
-                        <span style="font-weight: 600;">Celebrate the life you have!</span> Birthdays are the one
-                         time of year we get to celebrate those closest to us 
-                         and we should take 
-                        the opportunity to let them know just 
-                        how much they are appreciated.
-                    </p>
-                    <p class="second-text">
-                        We all know that a unique birthday greeting card 
-                        is a great way to make the Birthday Person's day memorable.
-                         But let’s be honest. Even though it seems simple,
-                          writing a perfect birthday card sometimes isn’t
-                           the easiest thing to do. That's why we compiled
-                            a list of <span style="font-weight: 600;">Birthday Wishes</span> 
-                         to inspire your next Birthday Greeting Card.
+                <p i18n="grandCanyonYosemiteArches17" class="first-text i18n">
+                    <span i18n="grandCanyonYosemiteArches16" class="boldtext i18n">Celebrate the life you have!</span> Birthdays are the one
+                     time of year we get to celebrate those closest to us 
+                     and we should take 
+                    the opportunity to let them know just 
+                    how much they are appreciated.
                 </p>
+                <p i18n="grandCanyonYosemiteArches18" class="second-text i18n">
+                    We all know that a unique birthday greeting card 
+                    is a great way to make the Birthday Person's day memorable.
+                     But let’s be honest. Even though it seems simple,
+                      writing a perfect birthday card sometimes isn’t
+                       the easiest thing to do. That's why we compiled
+                        a list of <span i18n="grandCanyonYosemiteArches19" class="boldtext i18n">Birthday Wishes</span> 
+                     to inspire your next Birthday Greeting Card.
+            </p>
             </div>
         </div>               
     </div>
-    <div class="second-container box">
+    <div class="second-container box admin">
         <div class="content-second">
             <div>
                 <img src="./images/ArticleImage.png" alt=""  class="imagen">
             </div>  
             <div class="Readinf">
                 <div class="title second">
-                    <p>Inspiration</p>
-                    <p class="weight">
+                    <p i18n="grandCanyonYosemiteArches14" class="i18n">Inspiration</p>
+                    <p i18n="grandCanyonYosemiteArches15" class="weight i18n">
                         The Ultimate Guide: What to Write in a Birthday Card
                     </p>
                 </div>
-                    <p class="first-text">
-                        <span style="font-weight: 600;">Celebrate the life you have!</span> Birthdays are the one
+                    <p i18n="grandCanyonYosemiteArches17" class="first-text i18n">
+                        <span i18n="grandCanyonYosemiteArches16" class="boldtext i18n">Celebrate the life you have!</span> Birthdays are the one
                          time of year we get to celebrate those closest to us 
                          and we should take 
                         the opportunity to let them know just 
                         how much they are appreciated.
                     </p>
-                    <p class="second-text">
+                    <p i18n="grandCanyonYosemiteArches18" class="second-text i18n">
                         We all know that a unique birthday greeting card 
                         is a great way to make the Birthday Person's day memorable.
                          But let’s be honest. Even though it seems simple,
                           writing a perfect birthday card sometimes isn’t
                            the easiest thing to do. That's why we compiled
-                            a list of <span style="font-weight: 600;">Birthday Wishes</span> 
+                            a list of <span i18n="grandCanyonYosemiteArches19" class="boldtext i18n">Birthday Wishes</span> 
                          to inspire your next Birthday Greeting Card.
                 </p>
             </div>
@@ -145,46 +154,47 @@
                 </div>
             </div>
         </div>
+      
         <div class="footer-nav-menu">
             <div>
-                <p>Shop</p>
-                <a href="shopall.html">Shop all</a>
-                <a href="">Greeting Cards</a>
-                <a href="">Assorted Cards Sets</a>
-                <a href="">Notebooks</a>
+                <p i18n="grandCanyonYosemiteArches34" class="i18n ">Shop</p>
+                <a i18n="grandCanyonYosemiteArches26" href="" class="i18n ">Shop all</a>
+                <a i18n="grandCanyonYosemiteArches27" href="" class="i18n ">Greeting Cards</a>
+                <a i18n="grandCanyonYosemiteArches28" href="" class="i18n ">Assorted Cards Sets</a>
+                <a i18n="grandCanyonYosemiteArches29" href="" class="i18n ">Notebooks</a>
             </div>
             <div>
-                <p>About</p>
-                <a href="">Our story</a>
-                <a href="">Our Values</a>
-                <a href="">Journal</a>
-                <a href="">Sustainability</a>
+                <p i18n="grandCanyonYosemiteArches35" class="i18n ">About</p>
+                <a i18n="grandCanyonYosemiteArches30" href="" class="i18n ">Our story</a>
+                <a i18n="grandCanyonYosemiteArches31" href="" class="i18n ">Our Values</a>
+                <a i18n="grandCanyonYosemiteArches32" href="" class="i18n ">Journal</a>
+                <a i18n="grandCanyonYosemiteArches33" href="" class="i18n ">Sustainability</a>
             </div>
             <div>
-                <p>Customer Care</p>
-                <a href="">About Us</a>
-                <a href="">FAQs</a>
-                <a href="">Return & Exchanges</a>
-                <a href="">Support</a>
+                <p i18n="grandCanyonYosemiteArches36" class="i18n ">Customer Care</p>
+                <a i18n="grandCanyonYosemiteArches37" href="" class="i18n ">About Us</a>
+                <a i18n="grandCanyonYosemiteArches38" href="" class="i18n ">FAQs</a>
+                <a i18n="grandCanyonYosemiteArches39" href="" class="i18n ">Return & Exchanges</a>
+                <a i18n="grandCanyonYosemiteArches40" href="" class="i18n ">Support</a>
             </div>
             <div>
-                <p>Wholesales</p>
-                <a href="">Overview</a>
-                <a href="">Register as a Wholesales</a>
-                <a href="">Access the Wholesales Store</a>
+                <p i18n="grandCanyonYosemiteArches41" class="i18n ">Wholesales</p>
+                <a i18n="grandCanyonYosemiteArches42" href="" class="i18n ">Overview</a>
+                <a i18n="grandCanyonYosemiteArches43" href="" class="i18n ">Register as a Wholesales</a>
+                <a i18n="grandCanyonYosemiteArches44" href="" class="i18n ">Access the Wholesales Store</a>
             </div>
         </div>
         <div class="footer-links">
-           <span>© 2021 Twigs Paper. All Rights Reserved.</span>
+           <span i18n="grandCanyonYosemiteArches45" class="i18n ">© 2021 Twigs Paper. All Rights Reserved.</span>
             <div>
-                <a href="">Privacy Policy</a>
-                <a href="">Terms & Conditions</a>
+                <a i18n="grandCanyonYosemiteArches46" href="" class="i18n ">Privacy Policy</a>
+                <a i18n="grandCanyonYosemiteArches47" href="" class="i18n ">Terms & Conditions</a>
             </div>
-           <span>Built by The Papestielliz</span>
+           <span i18n="grandCanyonYosemiteArches48" class="i18n ">Built by The Papestielliz</span>
         </div>
     </div>
 </footer>
-<script src="script.js"></script>
+<script src="scriptforarticle.js"></script>
 </body>
 
 </html>
