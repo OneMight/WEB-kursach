@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="privacystyles.css">
     <link rel="stylesheet" href="adaptivestyle.css">
-    <link rel="stylesheet" href="QuestionStyles.css">
-    <title class="i18n" i18n="Question">Question</title>
+    
+    <title>Privacy</title>
 </head>
 <body>
     <header>
@@ -15,16 +17,19 @@
         </a>
             <div class="nav_menu">
                 <nav>
-                    <a href="shopall.html">
+                    <a id="shop" href="shopall.html">
                         <p i18n="shop" class=" i18n">Shop</p>
                         <img src="./images/mark.svg" alt="">
                     </a>
-                    <a href="ReadArticle.html">
+                    <a id="about" href="ReadArticle.html">
                         <p i18n ="about" class="i18n">About</p>
                         <img src="./images/mark.svg" alt="">
                     </a>
-                    <a href="Questions.html">
+                    <a id="sustainability" href="Questions.html">
                         <p i18n ="sustainability" class="i18n">Sustainability</p>
+                    </a>
+                    <a id="checkusers" href="./checkallusers.html">
+                        <p i18n="checkusers" class="i18n">Check all users</p>
                     </a>
                 </nav>
             </div>
@@ -40,9 +45,7 @@
             </div>
             
             <div class="header-right">
-                <p class="username"></p>
-
-               
+                <p class="username"></p>               
                 <button id="logout"><span i18n="logout" class="i18n logout">Log out</span> </button>
                 
                 <div >
@@ -61,9 +64,7 @@
             </label>
             <div class="burger-menu">
                 <p class="username"></p>
-                <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
-                
-               
+                <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button> 
                 <a href="shopall.html" i18n="shop" class="i18n shop">Shop</a>
                 <a href="ReadArticle.html" i18n="about" class="i18n about">About</a>
                 <a href="Questions.html" i18n="sustainability" class="i18n sustainability">Sustainability</a>
@@ -73,45 +74,69 @@
             </div>
     </header>
     <main>
-        <div class="title-of-main box">
-            <p i18n="support" class="title-text i18n">
-                support
-            </p>
-            <p i18n="Thissection" class="section i18n admin">
-                This section provides answers to frequently
-                 asked questions from visitors to your future site.
-                  Using this section will reduce the burden on
-                  operators and increase the satisfaction of 
-                  your customers.
-            </p>
-        </div>
-        <div class="questions">
-            <div class="questions-div">
-                <p i18n="isit" class="i18n questiontext">
-                    Is it possible to pick up the ordered goods?
-                </p>
-            </div>
-            <div class="questions-div">
-                <p i18n="Howto" class="i18n questiontext">
-                    How to calculate shipping costs?
-                </p>
-            </div>
-            <div class="questions-div">
-                <p i18n="Howis" class="i18n questiontext">
-                    How is delivery to the regions carried out?
-                </p>
-            </div>
-            <div class="questions-div">
-                <p i18n="Willthe" class="i18n questiontext">
-                    Will the goods arrive intact?
-                </p>
-            </div>
-            <div class="questions-div admin">
-                <p i18n="Howlong" class="i18n questiontext">
-                    How long does it take to order?
-                </p>
+        <div class="Login">
+            <button class="button-close-login buttonclose i18n" i18n="close" >Close</button>
+            <div>
+                <b i18n="login" class="i18n login">Log in</b>
+              
+                    <div class="login-form">
+                        <label for="Logup"><b i18n="AccountName" class="i18n">Account Name</b></label>
+                        <input id="Logup" type="text" placeholder="Enter Account name" name="Account" required>
+                        <label for="pws"><b i18n="Password" class="i18n">Password</b></label>
+                        <input id="PasswordLog" type="password" placeholder="Enter Password" required>
+                        <button id = "log"><span i18n="login" class="i18n">Log in</span></button>
+                    </div>
+                   
+              
+                
             </div>
         </div>
+        <div class="Register">
+            <button class="button-close-reg buttonclose i18n" i18n="close">Close</button>
+            <div>
+                <b class="i18n" i18n="signup">Sing up</b>
+                    
+                    <div class="reg-form">
+                        <label for="Email"><b class="i18n" i18n="Email">Email</b></label>
+                        <input id="Email" type="text" placeholder="Enter email" name="Email" required>
+                        <label for="FisrtName"><b class="i18n" i18n="FirstName">First Name</b></label>
+                        <input type="text" id="FirstName" placeholder="Enter First Name" name="FistName" required>
+                        <label for="LastName"><b class="i18n" i18n="LastName">Last Name</b></label>
+                        <input type="text" id="LastName" placeholder="Enter Last Name" name="LastName" required>
+                        <label for="FatherName"><b class="i18n" i18n="FatherName">Father Name</b></label>
+                        <input type="text" id="FatherName" placeholder="Enter Father Name" name="FatherName" >
+                        <button id="generatelogin">Generate login</button>
+                        <label for="Logup"><b class="i18n" i18n="AccountName">Account Name</b></label>
+                        <input id="Logup2" type="text" placeholder="Enter Account name" name="Account" required>
+                        <label for="pws"><b class="i18n" i18n="Password">Password</b></label>
+                        <input type="password" id="password" placeholder="Enter Password" name="passwod" required>
+                        <label for="pws"><b class="i18n" i18n="CPassword">Confirm Password</b></label>
+                        <input type="password" id="Cpassword" placeholder="Confirm Password" name="Comfpasswod" required>
+                        <div class="Policy">
+                            <input type="checkbox" class="checkboxprivacy">
+                            <a href="privacy.html" class="Privacy">Privacy Policy and Terms & Conditions</a>
+                        </div>
+                       
+                        <button id = "sign"><span class="i18n" i18n="signup" >Sign up</span></button>
+                    </div>
+               
+            </div>
+        </div>
+    </header>
+    <main>
+        <div>
+            <p class="i18n headerprivacy" i18n="headerprivacy">Privacy Policy and Terms & Conditions</p>
+            <div>
+                <div class="privacydiv">
+                    <p class="i18n privacy1" i18n="privacy1">You can use our services in a variety of ways to manage your privacy. For example, you can sign up for a Google Account if you want to create and manage content like emails and photos, or see more relevant search results. And you can use many Google services when you’re signed out or without creating an account at all, like searching on Google or watching YouTube videos. You can also choose to browse the web in a private mode, like Chrome Incognito mode, which helps keep your browsing private from other people who use your device. And across our services, you can adjust your privacy settings to control whether we collect some types of data and how we use it.</p>
+                </div>
+                <div class="privacydiv">
+                    <p class="i18n privacy2" i18n="privacy2">We collect information to provide better services to all our users — from figuring out basic stuff like which language you speak, to more complex things like which ads you’ll find most useful, the people who matter most to you online, or which YouTube videos you might like. The information Google collects, and how that information is used, depends on how you use our services and how you manage your privacy controls.                         When you’re not signed in to a Google Account, we store the information we collect with unique identifiers tied to the browser, application, or device you’re using. This allows us to do things like maintain your preferences across browsing sessions, such as your preferred language or whether to show you more relevant search results or ads based on your activity. When you’re signed in, we also collect information that we store with your Google Account, which we treat as personal information.</p>
+                </div>
+            </div>
+        </div>
+           
+            
     </main>
     <footer>
         <div class="container-footer">
@@ -166,6 +191,6 @@
             </div>
         </div>
     </footer>
-    <script src="scriptforQuestion.js"></script>
+    <script src="scriptforprivacy.js"></script>
 </body>
 </html>

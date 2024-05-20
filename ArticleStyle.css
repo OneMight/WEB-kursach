@@ -67,28 +67,21 @@ nav > a{
     font-size: 20px;
     color:#000000;
 }
-#burgerLog{
-    color:#000000;
-    display: block;
+
+#burgerlogout{
+    color:white;
+    justify-content: center;
     text-align: center;
-    background-color: #F9E9E0;
-    width: 45%;
+    background-color: #AAB9CF;
+    width: 90%;
     padding: 10px 0;
+    display: flex;
+    text-align: center;
     text-decoration: none;
-    border: 1px solid  #F9E9E0;
+    border: 1px solid  #AAB9CF;
     border-radius: 10px;
 }
-#burgerSign{
-    color:#000000;
-    display: block;
-    text-align: center;
-    background-color: #F9E9E0;
-    width: 45%;
-    padding: 10px 0;
-    text-decoration: none;
-    border: 1px solid  #F9E9E0;
-    border-radius: 10px;
-}
+
 .log{
     margin-top: 20px;
     width: 90%;
@@ -106,13 +99,13 @@ nav > a{
 }
 
 .burger-menu > a{
-    color:#000000;
+    color:white;
     text-align: center;
     text-decoration: none;
     width: 90%;
-    background-color:#F9E9E0;
+    background-color:#AAB9CF;
     padding: 10px 0;
-    border: 1px solid  #F9E9E0;
+    border: 1px solid  #AAB9CF;
     border-radius: 10px;
     
 }

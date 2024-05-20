@@ -11,17 +11,38 @@ let loginmenu = document.querySelector('.Login');
 let registrmenu = document.querySelector('.Register');
 let logut = document.getElementById('logout');
 let logining = false;
+let buttoncloselog = document.querySelector('.button-close-login');
+let buttonclosereg = document.querySelector('.button-close-reg');
 let username = localStorage.getItem('username');
 let password = localStorage.getItem('password');
 const burger_menu_toogle = document.getElementById('menu_toogle');
 const burger_menu = document.querySelector('burger-menu');
 let searchicon = document.querySelector(".search-photo");
 let shoppingicon = document.querySelector(".shoping");
+let burgerlogout = document.getElementById('burgerlogout');
+let translate = 'en';
+
+buttoncloselog.addEventListener('click',function(){
+    loginmenu.style= 'margin-left: -3000px !important';
+  }
+)
+buttonclosereg.addEventListener('click',function(){
+  registrmenu.style = 'margin-left: -3000px !important';
+  }
+)
 
 
 singup.addEventListener('click', function(){
-  registrmenu.style.transform = 'translateX(-2850px)';
-  loginmenu.style.transform = 'translateX(-2150px)';
+  if (window.innerWidth > 1440) {
+    registrmenu.style = 'margin-left: 500px !important';
+    
+  }
+  else{
+    registrmenu.style = 'margin-left: 0px !important';
+   
+  }
+  loginmenu.style= 'margin-left: -3000px !important';
+ 
 })
 const buttonshop = document.getElementById('shop-now-first');
 buttonshop.addEventListener('click', function () {
@@ -30,7 +51,13 @@ buttonshop.addEventListener('click', function () {
     localStorage.setItem('currentpage','shopall.html');
   }
   else{
-    loginmenu.style.transform = 'translateX(2150px)';
+    if(window.innerWidth > 1440){
+      loginmenu.style = 'margin-left: 500px !important';
+    }
+    else{
+      loginmenu.style= 'margin-left: 0px !important';
+    }
+    
   }
 
 });
@@ -47,24 +74,84 @@ shopnow.addEventListener('click',function(){
     localStorage.setItem('currentpage','shopall.html');
   }
   else{
-    loginmenu.style.transform = 'translateX(2150px)';
+    if(window.innerWidth > 1440){
+      loginmenu.style = 'margin-left: 500px !important';
+    }
+    else{
+      loginmenu.style= 'margin-left: 0px !important';
+    }
   }
 })
 
 login.addEventListener('click', function(){
-  loginmenu.style = 'transform: translateX(2150px)';
-  registrmenu.style.transform = 'translateX(2850px)';
-  
+  if (window.innerWidth > 1440) {
+    loginmenu.style = 'margin-left: 500px !important';
+  }
+  else{
+    loginmenu.style= 'margin-left: 0px !important';
+    
+  }
+  registrmenu.style = 'margin-left: -3000px !important';
 })
 
 let login_burger = document.getElementById('burgerLog');
 login_burger.addEventListener('click', function(){
-  loginmenu.style = 'transform: translateX(2300px)';
+  registrmenu.style= 'margin-left: -3000px !important';
+  loginmenu.style= 'margin-left: 0px !important';
+})
+let sign_burger = document.getElementById('burgerSign');
+sign_burger.addEventListener('click', function(){
+  loginmenu.style= 'margin-left: -3000px !important';
+  registrmenu.style= 'margin-left: 0px !important';
+})
+let burgershop = document.querySelector('.shop');
+let burgerabout = document.querySelector('.about');
+let burgersustainability = document.querySelector('.sustainability');
+burgerabout.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'ReadArticle.html'
+  }
+})
+burgershop.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'shopall.html'
+  }
+})
+burgersustainability.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'Questions.html'
+  }
 })
 
 
 const body = document.body;
 
+const isEnLanguage = localStorage.getItem('translate');
+if(isEnLanguage ==='en'){
+  loadLanguage(isEnLanguage)
+  const EnOption = languageSelect.querySelector('option[value="en"]');
+  EnOption.selected = true;
+}
+else{
+  loadLanguage('ru');
+  const ruOption = languageSelect.querySelector('option[value="ru"]');
+  ruOption.selected = true;
+}
 // Проверяем, есть ли сохраненное значение в локальном хранилище
 const isDarkThemeEnabled = localStorage.getItem('darkThemeEnabled') === 'true';
 let searchphoto = document.querySelector('.search-photo');
@@ -244,7 +331,6 @@ Login.addEventListener('click', function(){
         elements.style = "display:flex"
       }
     }
-    
   }
  
  }
@@ -266,6 +352,10 @@ function setLoginNameOnSite(){
  loginmenu.style = 'transform: translateX(-2150px)';
  singup.style.display = 'none';
  login.style.display = "none";
+ login_burger.style.display = 'none';
+ sign_burger.style.display = 'none';
+
+ burgerlogout.style.display ="flex";
 }
 //выход из аккаунта
 logut.addEventListener('click',function(){
@@ -281,6 +371,23 @@ logut.addEventListener('click',function(){
   }
   checkusers.style.display = "none";
   logut.style.display = "none";
+  burgerlogout.style.display ="none";
+  localStorage.setItem('logining','false');
+})
+
+burgerlogout.addEventListener('click',function(){
+  username = '';
+  password = '';
+  //убираем значения юзера с локалки
+  localStorage.setItem('username',`${username}`);
+  localStorage.setItem('password',`${password}`);
+  singup.style.display = 'flex';
+  login.style.display = "flex";
+  for(let elem of pUsername){
+    elem.style.display = "none";
+  }
+  checkusers.style.display = "none";
+  burgerlogout.style.display = "none";
   localStorage.setItem('logining','false');
 })
 let checkerror = false
@@ -320,6 +427,42 @@ const languageselect = document.getElementById('languageSelect');
 languageselect.addEventListener('change', function(){
   let select = languageselect.value;
   loadLanguage(select)
+  
+  localStorage.setItem('translate',select);
+})
+
+
+function generateUsername() {
+  const adjectives = ['Adventurous', 'Brave', 'Curious', 'Daring', 'Energetic', 'Friendly', 'Helpful', 'Imaginative', 'Kind', 'Optimistic',"Abacus","Candle","Eavesdrop","Gurgle","Icicle","Kaleidoscope","Marigold","Opaline","Quibble","Tangle","Vanguard","Xenial","Zephyr","Ambrosia","Daffodil","Frangipani","Gingko","Illusion"];
+  const nouns = ['Sunflower', 'Raindrop', 'Firefly', 'Pebble', 'Bumblebee', 'Starfish', 'Snowflake', 'Wildflower', 'Seashell', 'Dragonfly',"Bangle","Dangle","Fascinate","Hazelnut","Jargon","Limelight","Nimble","Panacea","Ramble","Serenade","Unravel","Whimsical","Yearn","Brocade","Camellia","Effervescent","Hinterland","Juniper"];
+
+  const randomAdjective = adjectives[Math.floor(Math.random() * adjectives.length)];
+  const randomNoun = nouns[Math.floor(Math.random() * nouns.length)];
+
+  return `${randomAdjective}${randomNoun}`;
+}
+let count = 0
+
+const randombutton = document.getElementById('generatelogin');
+randombutton.addEventListener('click',function(){
+  
+  let account = document.getElementById('Logup2');
+  if(count < 5){
+   const username = generateUsername();
+  
+    account.value = username; 
+    count++;
+  }
+  else{
+    if(!checkerror){
+    let errorMessge = document.createElement('p');
+    errorMessge.innerText = "You cant generate more than 5 count";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    account.insertAdjacentElement('afterend', errorMessge);
+    checkerror = true;
+    }
+  }
+  
 })
 
 
@@ -327,10 +470,28 @@ languageselect.addEventListener('change', function(){
 
 //добавление нового пользователя
 let ussersArray = [];
-
+let checkerror1 = false;
+let checkerror2 = false;
+let checkerror3 = false;
+let checkerror4 = false;
+let checkerrorprivacy = false;
 const sign = document.getElementById("sign");
 sign.addEventListener("click", function(){
   let url = 'i18n.json';
+  const password = document.getElementById('password').value;
+  const validationMessage = validatePassword(password);
+  validateEmail();
+  let checkboxprivacy = document.querySelector('.checkboxprivacy');
+  if(!checkboxprivacy.checked){
+    if(!checkerrorprivacy){
+      let errorMessge = document.createElement('p');
+    errorMessge.innerText = "Read Privacy policy";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    document.querySelector('.Policy').insertAdjacentElement('afterend', errorMessge);
+    checkerrorprivacy = true;
+    }
+    
+  }
   if(document.getElementById('password').value == document.getElementById('Cpassword').value){
     fetch(url)
     .then(response => response.json())
@@ -345,9 +506,90 @@ sign.addEventListener("click", function(){
       login : document.getElementById('Logup').value,
       password : document.getElementById('password').value
     }
-    ussersArray.push(newUser);
+    ussersArray.push(newUser)
   }
+  else if(validationMessage)
+    {
+      alert(validationMessage);
+  }
+  else if(document.getElementById('Email').value ==''){
+    if(!checkerror1){
+      let errorMessge = document.createElement('p');
+    errorMessge.innerText = "Incorrect Email";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    document.getElementById('Email').insertAdjacentElement('afterend', errorMessge);
+    checkerror1 = true;
+    return;
+    }
+    
+  }
+  else if(document.getElementById('FirstName').value ==''){
+    if(!checkerror2){
+  let errorMessge = document.createElement('p');
+    errorMessge.innerText = "Fisrt name cannot be empty";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    document.getElementById('FirstName').insertAdjacentElement('afterend', errorMessge);
+    checkerror2 = true;
+    }
+   
+  }
+  else if(document.getElementById('LastName').value == ''){
+    if(!checkerror3){
+     let errorMessge = document.createElement('p');
+    errorMessge.innerText = "Last name cannot be empty";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    document.getElementById('LastName').insertAdjacentElement('afterend', errorMessge);
+    checkerror3 = true; 
+    }
+    
+  }
+  else if(document.getElementById('Logup').value ==''){
+    if(!checkerror4){
+      let errorMessge = document.createElement('p');
+    errorMessge.innerText = "Incorrect account name";
+    errorMessge.style = "color: red; font-size: 12px" ;
+    document.getElementById('Logup').insertAdjacentElement('afterend', errorMessge);
+    checkerror4 = true;
+    }
+  }
+
 })
+function validateEmail() {
+  const emailInput = document.getElementById('Email');
+  const email = emailInput.value.trim();
+
+  // Проверяем, что email содержит один из допустимых доменов
+  const allowedDomains = ['@gmail.com', '@mail.ru', '@yandex.ru'];
+  const isValidDomain = allowedDomains.some(domain => email.endsWith(domain));
+
+  if (!isValidDomain) {
+    alert('Please enter a valid email address (e.g., @gmail.com, @mail.ru, @yandex.ru)');
+  }
+}
+function validatePassword(password) {
+  // Проверяем длину пароля
+  if (password.length < 8) {
+    return "Пароль должен содержать не менее 8 символов";
+  }
+
+  // Проверяем наличие специальных символов
+  if (!/[!@#$%^&*(),.?":{}|<>]/.test(password)) {
+    return "Пароль должен содержать не менее одного специального символа";
+  }
+
+  // Проверяем наличие заглавных букв
+  if (!/[A-Z]/.test(password)) {
+    return "Пароль должен содержать не менее одной заглавной буквы";
+  }
+
+  // Проверяем наличие английских букв
+  if (!/[a-zA-Z]/.test(password)) {
+    return "Пароль должен содержать только английские буквы";
+  }
+
+  // Если все проверки пройдены, пароль считается валидным
+  return null;
+}
 
 let shopheader = document.getElementById('shop');
 let aboutheader = document.getElementById('about');

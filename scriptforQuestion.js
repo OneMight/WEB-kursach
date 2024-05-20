@@ -105,6 +105,7 @@ function loadLanguage(language) {
   languageselect.addEventListener('change', function(){
     let select = languageselect.value;
     loadLanguage(select)
+    localStorage.setItem('translate',select);
 })
 
 logut.addEventListener('click',function(){
@@ -155,3 +156,28 @@ function setLoginNameOnSite(){
     singup.style.display = 'none';
     login.style.display = "none";
 }
+let translate = 'en';
+const isEnLanguage = localStorage.getItem('translate');
+if(isEnLanguage ==='en'){
+  loadLanguage(isEnLanguage)
+  const EnOption = languageSelect.querySelector('option[value="en"]');
+  EnOption.selected = true;
+}
+else{
+  loadLanguage('ru');
+  const ruOption = languageSelect.querySelector('option[value="ru"]');
+  ruOption.selected = true;
+}
+burgerlogout.addEventListener('click',function(){
+  username = '';
+  password = '';
+  //убираем значения юзера с локалки
+  localStorage.setItem('username',`${username}`);
+  localStorage.setItem('password',`${password}`);
+
+  for(let elem of pUsername){
+    elem.style.display = "none";
+  }
+  window.location = "index.html";
+  localStorage.setItem('logining','false');
+})

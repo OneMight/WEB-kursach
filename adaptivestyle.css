@@ -115,6 +115,13 @@
         justify-content: space-around;
     
     }
+    .Register{
+        width: 100%;
+    }
+    .Login{
+        width: 100%;
+    }
+    
     .toogle-switch{
         margin-right: 50px;
     }
@@ -279,6 +286,15 @@
     
       .container-slider{
         width: 100%;
+    }
+    #button-close-login{
+        margin-right: 200px;
+    }
+    #button-close-reg{
+        margin-right: 200px;
+    }
+    input[type = "text"],input[type = "password"]{
+        width: 90%;
     }
     .Arrows{
         display: flex;

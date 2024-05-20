@@ -2,14 +2,63 @@ let buttonswitch = document.getElementById("check");
 let box = document.getElementsByClassName('box');
 let header = document.querySelector('header');
 let text = document.querySelectorAll('p');
-let singup = document.getElementById('Sign-up');
-let login = document.getElementById('Log-in');
+
 let logut = document.getElementById('logout');
 const isDarkThemeEnabled = localStorage.getItem('darkThemeEnabled') === 'true';
 let username = localStorage.getItem('username');
-
+let burgerlogout = document.getElementById('burgerlogout');
 let searchicon = document.querySelector(".search-photo");
 let shoppingicon = document.querySelector(".shoping");
+// Устанавливаем начальное значение в соответствии с сохраненным значением
+if (isDarkThemeEnabled) {
+  switchdarktheme();
+  buttonswitch.checked = true;
+  
+}
+
+function switchdarktheme(){
+  document.body.classList.add("night-theme");
+  header.classList.add("night-theme"); 
+  logo.style = "filter: invert(1)";
+  searchicon.style.filter = "invert(1)";
+  shoppingicon.style.filter = "invert(1)";
+
+
+ for (let elem of text) {
+     
+    elem.classList.add("night-text");
+ }
+ logut.style.backgroundColor = "#310A31";
+ logut.style.color = "#50FFB1";
+for(let i = 0; i < box.length; i++){
+     box[i].classList.add("night-theme");
+}
+}
+function switchlight(){
+  document.body.classList.remove("night-theme");
+  header.classList.remove("night-theme");
+  searchicon.style.filter = "invert(0)";
+  shoppingicon.style.filter = "invert(0)";
+  logo.style = "filter: invert(0)";
+  for(let elem of box){
+      elem.classList.remove("night-theme");
+  }
+  logut.style.backgroundColor = "#FCF8F3";
+ logut.style.color = "#000000"
+  for (let elem of text) {
+      elem.classList.remove("night-text");
+  }
+}
+buttonswitch.addEventListener('change',function(){
+    if(buttonswitch.checked){  
+      localStorage.setItem('darkThemeEnabled','true') 
+      switchdarktheme();
+        }
+     else {
+      switchlight();
+         localStorage.setItem('darkThemeEnabled','false')
+     }
+});
 
 let burgershop = document.querySelector('.shop');
 let burgerabout = document.querySelector('.about');
@@ -44,58 +93,6 @@ burgersustainability.addEventListener('click',function(event){
     window.location.href = 'Questions.html'
   }
 })
-// Устанавливаем начальное значение в соответствии с сохраненным значением
-if (isDarkThemeEnabled) {
-  switchdarktheme();
-  buttonswitch.checked = true;
-  
-}
-function switchdarktheme(){
-  document.body.classList.add("night-theme");
-  header.classList.add("night-theme"); 
-  logo.style = "filter: invert(1)";
-  searchicon.style.filter = "invert(1)";
-  shoppingicon.style.filter = "invert(1)";
-
- for (let elem of text) {
-     
-    elem.classList.add("night-text");
- }
- logut.style.backgroundColor = "#310A31";
- logut.style.color = "#50FFB1";
-for(let i = 0; i < box.length; i++){
-     box[i].classList.add("night-theme");
-}
-}
-
-
-function switchlight(){
-  document.body.classList.remove("night-theme");
-  header.classList.remove("night-theme");
-  searchicon.style.filter = "invert(0)";
-  shoppingicon.style.filter = "invert(0)";
-  logo.style = "filter: invert(0)";
- 
-  for(let elem of box){
-      elem.classList.remove("night-theme");
-  }
-  logut.style.backgroundColor = "#FCF8F3";
- logut.style.color = "#000000";
-  for (let elem of text) {
-      elem.classList.remove("night-text");
-  }
-}
-buttonswitch.addEventListener('change',function(){
-    if(buttonswitch.checked){  
-      localStorage.setItem('darkThemeEnabled','true') 
-      switchdarktheme();
-        }
-     else {
-      switchlight();
-         localStorage.setItem('darkThemeEnabled','false')
-     }
-});
-
 
 function loadLanguage(language) {
   let url = 'i18n.json';
@@ -117,7 +114,7 @@ function loadLanguage(language) {
 const languageselect = document.getElementById('languageSelect');
 languageselect.addEventListener('change', function(){
   let select = languageselect.value;
-  loadLanguage(select);
+  loadLanguage(select)
   localStorage.setItem('translate',select);
 })
 
@@ -128,8 +125,7 @@ logut.addEventListener('click',function(){
   //убираем значения юзера с локалки
   localStorage.setItem('username',`${username}`);
   localStorage.setItem('password',`${password}`);
-  singup.style.display = 'flex';
-  login.style.display = "flex";
+
   for(let elem of pUsername){
     elem.style.display = "none";
   }
@@ -140,30 +136,23 @@ logut.addEventListener('click',function(){
 })
 let pUsername = document.querySelectorAll('.username');
 let checkuser = localStorage.getItem('logining') === 'true';
-if(checkuser && username !='Admin'){
+if(checkuser){
+    console.log(localStorage.getItem('logining'));
   setLoginNameOnSite();
   let unauthotized = document.querySelectorAll(".unauthotized");
     for(let elements of unauthotized){
       elements.style = "display:flex"
     }
 }
-else{
-  if(username == "Admin"){
-    setLoginNameOnSite();
-    let admindives = document.querySelector('.admin');
-   
-    admindives.style.display = "none";
-    
-  }
-}
+
+
 function setLoginNameOnSite(){
   for(let elem of pUsername){
    elem.textContent = localStorage.getItem('username');
    elem.style.display = "block";
-  
   }
-
-
+  logut.style = "display: flex";
+  burgerlogout.style.display ="flex";
  }
  let translate = 'en';
 const isEnLanguage = localStorage.getItem('translate');
@@ -183,6 +172,7 @@ burgerlogout.addEventListener('click',function(){
   //убираем значения юзера с локалки
   localStorage.setItem('username',`${username}`);
   localStorage.setItem('password',`${password}`);
+
   for(let elem of pUsername){
     elem.style.display = "none";
   }

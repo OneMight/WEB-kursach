@@ -81,6 +81,39 @@ buttonswitch.addEventListener('change',function(){
      }
 });
 
+let burgershop = document.querySelector('.shop');
+let burgerabout = document.querySelector('.about');
+let burgersustainability = document.querySelector('.sustainability');
+burgerabout.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'ReadArticle.html'
+  }
+})
+burgershop.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'shopall.html'
+  }
+})
+burgersustainability.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'Questions.html'
+  }
+})
 
 function loadLanguage(language) {
   let url = 'i18n.json';
@@ -103,6 +136,7 @@ const languageselect = document.getElementById('languageSelect');
 languageselect.addEventListener('change', function(){
   let select = languageselect.value;
   loadLanguage(select)
+  localStorage.setItem('translate',select);
 })
 
 logut.addEventListener('click',function(){
@@ -145,3 +179,28 @@ function setLoginNameOnSite(){
   singup.style.display = 'none';
   login.style.display = "none";
  }
+ let translate = 'en';
+const isEnLanguage = localStorage.getItem('translate');
+if(isEnLanguage ==='en'){
+  loadLanguage(isEnLanguage)
+  const EnOption = languageSelect.querySelector('option[value="en"]');
+  EnOption.selected = true;
+}
+else{
+  loadLanguage('ru');
+  const ruOption = languageSelect.querySelector('option[value="ru"]');
+  ruOption.selected = true;
+}
+burgerlogout.addEventListener('click',function(){
+  username = '';
+  password = '';
+  //убираем значения юзера с локалки
+  localStorage.setItem('username',`${username}`);
+  localStorage.setItem('password',`${password}`);
+
+  for(let elem of pUsername){
+    elem.style.display = "none";
+  }
+  window.location = "index.html";
+  localStorage.setItem('logining','false');
+})

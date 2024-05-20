@@ -6,7 +6,7 @@
     <meta name="set-cookie">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="adaptivestyle.css">
-    <title class="i18n">Twiqs</title>
+    <title class="i18n" i18n="title">Twiqs</title>
 </head>
 <body>
     <header>
@@ -72,8 +72,8 @@
                 </div>
                
                 <a href="shopall.html" i18n="shop" class="i18n shop">Shop</a>
-                <a href="#" i18n="about" class="i18n about">About</a>
-                <a href="#" i18n="sustainability" class="i18n sustainability">Sustainability</a>
+                <a href="ReadArticle.html" i18n="about" class="i18n about">About</a>
+                <a href="Questions.html" i18n="sustainability" class="i18n sustainability">Sustainability</a>
                 <div class="theme">
                     </div>
                 </div>
@@ -81,6 +81,7 @@
     </header>
     <main>
         <div class="Login">
+            <button class="button-close-login buttonclose i18n" i18n="close" >Close</button>
             <div>
                 <b i18n="login" class="i18n login">Log in</b>
               
@@ -97,27 +98,36 @@
             </div>
         </div>
         <div class="Register">
+            <button class="button-close-reg buttonclose i18n" i18n="close">Close</button>
             <div>
-                <b class="i18n">Sing up</b>
-                <form action="">
+                <b class="i18n" i18n="signup">Sing up</b>
+                    
                     <div class="reg-form">
-                        <label for="Email"><b>Email</b></label>
+                        <label for="Email"><b class="i18n" i18n="Email">Email</b></label>
                         <input id="Email" type="text" placeholder="Enter email" name="Email" required>
-                        <label for="FisrtName"><b>First Name</b></label>
+                        <label for="FisrtName"><b class="i18n" i18n="FirstName">First Name</b></label>
                         <input type="text" id="FirstName" placeholder="Enter First Name" name="FistName" required>
-                        <label for="LastName"><b>Last Name</b></label>
+                        <label for="LastName"><b class="i18n" i18n="LastName">Last Name</b></label>
                         <input type="text" id="LastName" placeholder="Enter Last Name" name="LastName" required>
-                        <label for="FatherName"><b>Father Name</b></label>
+                        <label for="FatherName"><b class="i18n" i18n="FatherName">Father Name</b></label>
                         <input type="text" id="FatherName" placeholder="Enter Father Name" name="FatherName" >
-                        <label for="Logup"><b>Account Name</b></label>
+                        <button id="generatelogin">Generate login</button>
+                        <label for="Logup"><b class="i18n" i18n="AccountName">Account Name</b></label>
                         <input id="Logup2" type="text" placeholder="Enter Account name" name="Account" required>
-                        <label for="pws"><b>Password</b></label>
+                        <label for="pws"><b class="i18n" i18n="Password">Password</b></label>
                         <input type="password" id="password" placeholder="Enter Password" name="passwod" required>
-                        <label for="pws"><b>Confirm Password</b></label>
+                        <label for="pws"><b class="i18n" i18n="CPassword">Confirm Password</b></label>
                         <input type="password" id="Cpassword" placeholder="Confirm Password" name="Comfpasswod" required>
-                        <button id = "sign"><span>Sign up</span></button>
+                        <div class="Policy">
+                            <input type="checkbox" class="checkboxprivacy">
+                            <a href="privacy.html" class="Privacy">Privacy Policy and Terms & Conditions</a>
+                        </div>
+                       
+                        <button id = "sign"><span class="i18n" i18n="signup" >Sign up</span></button>
                     </div>
-                </form>
+               
+                
+                
             </div>
         </div>
         <div class="container-first">
@@ -410,8 +420,8 @@
                 <div class="footer-links">
                    <span i18n="grandCanyonYosemiteArches45" class="i18n ">© 2021 Twigs Paper. All Rights Reserved.</span>
                     <div>
-                        <a i18n="grandCanyonYosemiteArches46" href="" class="i18n ">Privacy Policy</a>
-                        <a i18n="grandCanyonYosemiteArches47" href="" class="i18n ">Terms & Conditions</a>
+                        <a i18n="grandCanyonYosemiteArches46" href="privacy.html" class="i18n ">Privacy Policy</a>
+                        <a i18n="grandCanyonYosemiteArches47" href="privacy.html" class="i18n ">Terms & Conditions</a>
                     </div>
                    <span i18n="grandCanyonYosemiteArches48" class="i18n ">Built by The Papestielliz</span>
                 </div>

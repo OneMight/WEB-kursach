@@ -13,9 +13,43 @@ let logut = document.getElementById('logout');
 let our = document.querySelector('b');
 let logining = false;
 let username = localStorage.getItem("username");
-
+let logoutburger = document.getElementById('logoutburger');
 let searchicon = document.querySelector(".search-photo");
 let shoppingicon = document.querySelector(".shoping");
+
+let burgershop = document.querySelector('.shop');
+let burgerabout = document.querySelector('.about');
+let burgersustainability = document.querySelector('.sustainability');
+burgerabout.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'ReadArticle.html'
+  }
+})
+burgershop.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'shopall.html'
+  }
+})
+burgersustainability.addEventListener('click',function(event){
+  event.preventDefault()
+  if(localStorage.getItem('username') === '')
+  {
+    alert("You need to be login/register")
+  }
+  else{
+    window.location.href = 'Questions.html'
+  }
+})
 const burger_menu_toogle = document.getElementById('menu_toogle');
 
 const isDarkThemeEnabled = localStorage.getItem('darkThemeEnabled') === 'true';
@@ -31,10 +65,7 @@ function switchdarktheme(){
     searchicon.style.filter = "invert(1)";
   shoppingicon.style.filter = "invert(1)";
    logo.style = "filter: invert(1)";
-   singup.style.color = "#50FFB1";
-   singup.style.backgroundColor = "#310A31";
-   login.style.color = "#50FFB1";
-   login.style.backgroundColor = "#310A31";
+   
    logut.style.backgroundColor = "#310A31";
    logut.style.color = "#50FFB1";
   
@@ -104,7 +135,8 @@ function loadLanguage(language) {
   const languageselect = document.getElementById('languageSelect');
   languageselect.addEventListener('change', function(){
     let select = languageselect.value;
-    loadLanguage(select)
+    loadLanguage(select);
+    localStorage.setItem('translate',select);
 })
 
 logut.addEventListener('click',function(){
@@ -114,17 +146,28 @@ logut.addEventListener('click',function(){
     //убираем значения юзера с локалки
     localStorage.setItem('username',`${username}`);
     localStorage.setItem('password',`${password}`);
-    singup.style.display = 'flex';
-    login.style.display = "flex";
+
     for(let elem of pUsername){
       elem.style.display = "none";
     }
    
-    logut.style = "display: none";
+
     localStorage.setItem('logining','false');
     window.location = "index.html";
 })
+logoutburger.addEventListener('click',function(){
+  username = '';
+  password = '';
+  //убираем значения юзера с локалки
+  localStorage.setItem('username',`${username}`);
+  localStorage.setItem('password',`${password}`);
+  for(let elem of pUsername){
+    elem.style.display = "none";
+  }
 
+  localStorage.setItem('logining','false');
+  window.location = 'index.html';
+})
 let pUsername = document.querySelectorAll('.username');
 let checkuser = localStorage.getItem('logining') === 'true';
 if(checkuser && username !='Admin'){
@@ -149,8 +192,19 @@ function setLoginNameOnSite(){
      elem.style.display = "block";
     
     }
-    logut.style = "display: flex";
-  
-    singup.style.display = 'none';
-    login.style.display = "none";
+    
+
+}
+
+let translate = 'en';
+const isEnLanguage = localStorage.getItem('translate');
+if(isEnLanguage ==='en'){
+  loadLanguage(isEnLanguage)
+  const EnOption = languageSelect.querySelector('option[value="en"]');
+  EnOption.selected = true;
+}
+else{
+  loadLanguage('ru');
+  const ruOption = languageSelect.querySelector('option[value="ru"]');
+  ruOption.selected = true;
 }

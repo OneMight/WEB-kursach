@@ -31,7 +31,19 @@ main{
     justify-content: space-around;
     align-items:center;
 }
-
+#burgerlogout{
+    color:white;
+    justify-content: center;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+}
 .questions-div{
     width: 95%;
     background-color:#FCF8F3;

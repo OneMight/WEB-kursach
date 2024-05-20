@@ -378,17 +378,21 @@ footer{
     align-items: flex-start;
     flex-direction: column;
 }
-
-#logout{
-    display: none;
-    width: auto;
-    height: auto;
-    font-size: 17px;
-    margin: 0;
-    border:none;
-    background-color: #FCF8F3;
-    cursor: pointer;
+#logoutburger{
+    color:white;
+    justify-content: center;
+    text-align: center;
+    background-color: #AAB9CF;
+    width: 90%;
+    padding: 10px 0;
+    display: flex;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid  #AAB9CF;
+    border-radius: 10px;
+    font-size: 20px;
 }
+
 
 .night-theme{
     background-color:#310A31;
