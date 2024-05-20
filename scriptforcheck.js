@@ -37,10 +37,7 @@ function switchdarktheme(){
   logo.style = "filter: invert(1)";
   searchicon.style.filter = "invert(1)";
   shoppingicon.style.filter = "invert(1)";
- singup.style.color = "#50FFB1";
- singup.style.backgroundColor = "#310A31";
- login.style.color = "#50FFB1";
- login.style.backgroundColor = "#310A31";
+
  for (let elem of text) {
      
     elem.classList.add("night-text");
@@ -57,10 +54,7 @@ function switchlight(){
   searchicon.style.filter = "invert(0)";
   shoppingicon.style.filter = "invert(0)";
   logo.style = "filter: invert(0)";
-  singup.style.color = "#000000";
-  singup.style.backgroundColor = "#FCF8F3";
-  login.style.color = "#000000";
-  login.style.backgroundColor = "#FCF8F3";
+
   for(let elem of box){
       elem.classList.remove("night-theme");
   }
@@ -146,8 +140,7 @@ logut.addEventListener('click',function(){
   //убираем значения юзера с локалки
   localStorage.setItem('username',`${username}`);
   localStorage.setItem('password',`${password}`);
-  singup.style.display = 'flex';
-  login.style.display = "flex";
+
   for(let elem of pUsername){
     elem.style.display = "none";
   }
@@ -176,8 +169,7 @@ function setLoginNameOnSite(){
   
   }
   logut.style = "display: flex";
-  singup.style.display = 'none';
-  login.style.display = "none";
+ 
  }
  let translate = 'en';
 const isEnLanguage = localStorage.getItem('translate');

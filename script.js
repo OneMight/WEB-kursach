@@ -625,3 +625,9 @@ sustainabilityheader.addEventListener('click',function(event){
     window.location.href = 'Questions.html'
   }
 })
+
+let sust = document.querySelector('.openquest')
+sust.addEventListener('click', function(){
+  window.location = 'Questions.html';
+})
+

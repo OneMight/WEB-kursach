@@ -401,9 +401,11 @@ footer{
 }
 .imagen-first{
     width: 90%;
+    animation: zoom 8s ease-in-out infinite;
 }
 .imagen{
     width: 90%;
+    animation: translate 10s ease-in-out infinite;
 }
 
 @media screen and (max-width:768px) {
@@ -412,4 +414,26 @@ footer{
         width: 100%;
     }
 }
+@keyframes translate {
+    0% {
+      transform: translateX(0);
+    }
+    50% {
+      transform: translateX(20%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
 
+  @keyframes zoom {
+    0% {
+      transform: scale(0.9);
+    }
+    50% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(0.9);
+    }
+  }

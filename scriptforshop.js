@@ -86,10 +86,7 @@ function switchdarktheme(){
     searchicon.style.filter = "invert(0)";
   shoppingicon.style.filter = "invert(0)";
     logo.style = "filter: invert(0)";
-    singup.style.color = "#000000";
-    singup.style.backgroundColor = "#FCF8F3";
-    login.style.color = "#000000";
-    login.style.backgroundColor = "#FCF8F3";
+
     logut.style.backgroundColor = "#FCF8F3";
  logut.style.color = "#000000"
   

@@ -1,3 +1,4 @@
+
 html{
     scroll-behavior: smooth;
 }
@@ -408,6 +409,7 @@ nav > a{
     border: 1px solid #212806;
     border-radius: 20px;
     color: #FCF8F3;
+    transition: all,0.3s;
 }
 
 .feedback{
@@ -903,6 +905,7 @@ margin-top: 105px;
 .abs1{
     top: 63px;
     left: 95px;
+    animation-name: move1;
 
 }
 
@@ -910,32 +913,38 @@ margin-top: 105px;
     top: 103px;
     left: 282px;
     z-index: -1;
+    animation-name: move2;
 }
 
 .abs3{
     top: 360px;
     left: 95px;
+    animation-name: move3;
 }
 
 .abs4{
     top: 364px;
     left: 648px;
+    animation-name: move4;
 }
 
 .abs5{
     top: 270px;
     right: 460px;
     z-index: -1;
+    animation-name: move5;
 }
 
 .abs6{
     top: 410px;
     right: 160px;
+    animation-name: move6;
 }
 
 .abs7{
     top: 81px;
     right: 98px;
+    animation-name: move7;
 }
 
 footer{
@@ -1107,5 +1116,116 @@ footer{
 }
 footer a:hover{
     color:#d4c0a9;
+}
+#shop-now-first:hover{
+    width: 35%;
+    background-color:#310A31
+}
+.Button-shop-now:hover,#read-article:hover,.Sustainability:hover,#shop-all:hover{
+   
+    color:white;
+    background-color:#000000;
+}
+.Button-shop-now:hover,#read-article:hover,.Sustainability:hover,#shop-all:hover{
+    transition: all,0.3s;
+}
+.Cards >div:hover{
+    width: 80%;
+    box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset, rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+.Cards > div{
+   transition: all,0.4s ease; 
+   background-size: cover;
+   background-repeat:no-repeat;
+}
+nav a p{
+
+    margin: 0;
+}
+nav a{
+    transition: all,0.3s;
 
 }
+nav a:hover {
+    color:#78352a
+}
+
+#Sign-up:hover,#Log-in:hover,#logout:hover{
+    color:#78352a
+}
+#Sign-up,#Log-in,#logout{
+    transition: all,0.3s;
+}
+.cadrs-usa >div:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+.cadrs-usa >div{
+    transition: all,0.3s ease;
+}
+.tortoes:hover{
+    padding-left: 200px;
+}
+.tortoes{
+    transition: all, 0.4s;
+}
+.abs1, .abs2, .abs3, .abs4, .abs5, .abs6, .abs7 {
+    position: absolute;
+    animation-duration: 20s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+  }
+  @keyframes move1 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(20%) translateY(10%); }
+    50% { transform: translateX(-10%) translateY(-5%); }
+    75% { transform: translateX(5%) translateY(15%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  @keyframes move2 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-15%) translateY(5%); }
+    50% { transform: translateX(8%) translateY(-10%); }
+    75% { transform: translateX(-5%) translateY(12%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  @keyframes move3 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-8%) translateY(-12%); }
+    50% { transform: translateX(12%) translateY(6%); }
+    75% { transform: translateX(-10%) translateY(-8%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  @keyframes move4 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(15%) translateY(-8%); }
+    50% { transform: translateX(-6%) translateY(10%); }
+    75% { transform: translateX(10%) translateY(-5%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  @keyframes move5 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-18%) translateY(8%); }
+    50% { transform: translateX(12%) translateY(-12%); }
+    75% { transform: translateX(-8%) translateY(15%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  @keyframes move6 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(12%) translateY(-10%); }
+    50% { transform: translateX(-8%) translateY(8%); }
+    75% { transform: translateX(6%) translateY(-12%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
+  @keyframes move7 {
+    0% { transform: translateX(0) translateY(0); }
+    25% { transform: translateX(-15%) translateY(12%); }
+    50% { transform: translateX(10%) translateY(-8%); }
+    75% { transform: translateX(-8%) translateY(10%); }
+    100% { transform: translateX(0) translateY(0); }
+  }
+  
