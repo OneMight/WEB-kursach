@@ -404,6 +404,9 @@ footer{
     color:#50FFB1;
 
 }
+.images > img{
+    width: 80%;
+}
 
 @media screen and (max-width:1700px) {
     .grid-cards{
@@ -427,6 +430,9 @@ footer{
         grid-column-gap: 20%;
         grid-row-gap: 65px;
     }
+    .images > img{
+        width: 320px;
+    }
 }
 @media screen and (max-width:800px) {
     .grid-cards{
@@ -435,9 +441,8 @@ footer{
         grid-template-rows: repeat(15,5%);
         
     }
-    .images > img{
-        width: 320px;
-    }
+    
+    
 }
 @media screen and (max-width:430px) {
     .grid-cards{
