@@ -21,7 +21,7 @@ burgerabout.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'ReadArticle.html'
+    window.location.href = '../Read article/ReadArticle.html'
   }
 })
 burgershop.addEventListener('click',function(event){
@@ -31,7 +31,7 @@ burgershop.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'shopall.html'
+    window.location.href = '../Questions/shopall.html'
   }
 })
 burgersustainability.addEventListener('click',function(event){
@@ -41,7 +41,7 @@ burgersustainability.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'Questions.html'
+    window.location.href = '../Questions/Questions.html'
   }
 })
 // Устанавливаем начальное значение в соответствии с сохраненным значением
@@ -98,7 +98,7 @@ buttonswitch.addEventListener('change',function(){
 
 
 function loadLanguage(language) {
-  let url = 'i18n.json';
+  let url = '../i18n.json';
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -136,7 +136,7 @@ logut.addEventListener('click',function(){
  
   logut.style = "display: none";
   localStorage.setItem('logining','false');
-  window.location = "index.html";
+  window.location = "../HomePage/index.html";
 })
 let pUsername = document.querySelectorAll('.username');
 let checkuser = localStorage.getItem('logining') === 'true';
@@ -186,6 +186,6 @@ burgerlogout.addEventListener('click',function(){
   for(let elem of pUsername){
     elem.style.display = "none";
   }
-  window.location = "index.html";
+  window.location = "../HomePage/index.html";
   localStorage.setItem('logining','false');
 })

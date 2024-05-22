@@ -47,8 +47,8 @@ singup.addEventListener('click', function(){
 const buttonshop = document.getElementById('shop-now-first');
 buttonshop.addEventListener('click', function () {
   if(localStorage.getItem('logining') == true){
-    window.location = "shopall.html";
-    localStorage.setItem('currentpage','shopall.html');
+    window.location = "../Shop/shopall.html";
+    localStorage.setItem('currentpage','../Shop/shopall.html');
   }
   else{
     if(window.innerWidth > 1440){
@@ -64,14 +64,14 @@ buttonshop.addEventListener('click', function () {
 const buttonshopall = document.getElementById('shop-all');
 buttonshopall.addEventListener('click',function(){
   
-    window.location = 'shopall.html';
-    localStorage.setItem('currentpage','shopall.html');
+    window.location = '../Shop/shopall.html';
+    localStorage.setItem('currentpage','../Shop/shopall.html');
 })
 const shopnow = document.querySelector('.Button-shop-now');
 shopnow.addEventListener('click',function(){
   if(localStorage.getItem('logining') == true){
-    window.location = "shopall.html";
-    localStorage.setItem('currentpage','shopall.html');
+    window.location = "../Shop/shopall.html";
+    localStorage.setItem('currentpage','../Shop/shopall.html');
   }
   else{
     if(window.innerWidth > 1440){
@@ -114,7 +114,7 @@ burgerabout.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'ReadArticle.html'
+    window.location.href = '../Read article/ReadArticle.html'
   }
 })
 burgershop.addEventListener('click',function(event){
@@ -124,7 +124,7 @@ burgershop.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'shopall.html'
+    window.location.href = '../Shop/shopall.html'
   }
 })
 burgersustainability.addEventListener('click',function(event){
@@ -134,7 +134,7 @@ burgersustainability.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'Questions.html'
+    window.location.href = '../Questions/Questions.html'
   }
 })
 
@@ -307,7 +307,7 @@ Login.addEventListener('click', function(){
   username = logup;
   password = userpassword;
   
- let url = 'LoginAndPasswods.json';
+ let url = '../LoginAndPasswods.json';
  fetch(url)
  .then(response => response.json())
  .then(result => { for(let element of result){
@@ -407,7 +407,7 @@ function addredblocks(){
   }
 }
 function loadLanguage(language) {
-  let url = 'i18n.json';
+  let url = '../i18n.json';
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -477,7 +477,7 @@ let checkerror4 = false;
 let checkerrorprivacy = false;
 const sign = document.getElementById("sign");
 sign.addEventListener("click", function(){
-  let url = 'i18n.json';
+  let url = '../i18n.json';
   const password = document.getElementById('password').value;
   const validationMessage = validatePassword(password);
   validateEmail();
@@ -602,7 +602,7 @@ shopheader.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'shopall.html'
+    window.location.href = '../Shop/shopall.html'
   }
 })
 aboutheader.addEventListener('click',function(event){
@@ -612,7 +612,7 @@ aboutheader.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'ReadArticle.html'
+    window.location.href = '../Read article/ReadArticle.html'
   }
 })
 sustainabilityheader.addEventListener('click',function(event){
@@ -622,12 +622,12 @@ sustainabilityheader.addEventListener('click',function(event){
     alert("You need to be login/register")
   }
   else{
-    window.location.href = 'Questions.html'
+    window.location.href = '../Questions/Questions.html'
   }
 })
 
 let sust = document.querySelector('.openquest')
 sust.addEventListener('click', function(){
-  window.location = 'Questions.html';
+  window.location = '../Questions/Questions.html';
 })
 

@@ -12,7 +12,7 @@ header{
     background-color:#FCF8F3;
 }
 #logo{
-    content:url("./images/logo.svg");
+    content:url("../images/logo.svg");
     cursor:pointer;
 }
 
@@ -175,7 +175,7 @@ nav > a{
 
 .slider:before {
     position: absolute;
-    content:url("./images/Sun.png");
+    content:url("../images/Sun.png");
     height: 26px;
     width: 26px;
     left: 4px;
@@ -195,7 +195,7 @@ nav > a{
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-    content:url("./images/moon.png");
+    content:url("../images/moon.png");
   }
   
 
@@ -327,7 +327,7 @@ footer{
 }
 
 .logo-footer{
-    content:url("./images/logowhite.png");
+    content:url("../images/logowhite.png");
 }
 
 .footer-nav-menu{

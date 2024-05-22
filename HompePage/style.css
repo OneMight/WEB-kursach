@@ -17,7 +17,7 @@ header{
     position: relative;
 }
 #logo{
-    content:url("./images/logo.svg");
+    content:url("../images/logo.svg");
     cursor:pointer;
 }
 main{
@@ -370,7 +370,7 @@ nav > a{
     background-repeat: no-repeat;
     background-size: cover;
 
-    background-image: url("./images/backgroundfirst.svg");
+    background-image: url("../images/backgroundfirst.svg");
     height: 730px;
     display: flex;
     align-items:end;
@@ -424,7 +424,7 @@ nav > a{
     justify-content: center;
 }
 .stars{
-    content: url("./images/stars.svg")
+    content: url("../images/stars.svg")
 }
 .feedback > div > p{
    
@@ -611,7 +611,7 @@ button{
 .tortoes{
     width: 720px;
     height: 800px;
-    content:url("./images/tortoes.png")
+    content:url("../images/tortoes.png")
 }
 
 .right-tortoes{
@@ -777,7 +777,7 @@ button{
 .image{
     padding-top: 14px;
    padding-right: 75px;
-    content:url("./images/happybirthday.png");
+    content:url("../images/happybirthday.png");
 }
 
 .container-sixes{
@@ -845,16 +845,16 @@ button{
 
 .Greeting{
     cursor: pointer;
-    background-image:url("./images/greeting.png");
+    background-image:url("../images/greeting.png");
 }
 
 .Assorted{
     cursor: pointer;
-    background-image:url("./images/assorted.png");
+    background-image:url("../images/assorted.png");
 }
 .Notebooks{
     cursor: pointer;
-    background-image:url("./images/notebooks.png");
+    background-image:url("../images/notebooks.png");
 }
 
 .container-sevens{
@@ -869,7 +869,7 @@ margin-top: 105px;
 }
 
 .water{
-    content: url("./images/waterblank.png");
+    content: url("../images/waterblank.png");
 }
 
 .absolute-photos{
@@ -1005,7 +1005,7 @@ footer{
 }
 
 .logo-footer{
-    content:url("./images/logowhite.png");
+    content:url("../images/logowhite.png");
 }
 
 .footer-nav-menu{
@@ -1062,7 +1062,7 @@ footer{
 
   .slider:before {
     position: absolute;
-    content:url("./images/Sun.png");
+    content:url("../images/Sun.png");
     height: 26px;
     width: 26px;
     left: 4px;
@@ -1082,7 +1082,7 @@ footer{
     -webkit-transform: translateX(26px);
     -ms-transform: translateX(26px);
     transform: translateX(26px);
-    content:url("./images/moon.png");
+    content:url("../images/moon.png");
   }
   
 
