@@ -307,7 +307,7 @@ Login.addEventListener('click', function(){
   username = logup;
   password = userpassword;
   
- let url = '../LoginAndPasswods.json';
+ let url = '../jsonfiles/LoginAndPasswods.json';
  fetch(url)
  .then(response => response.json())
  .then(result => { for(let element of result){
@@ -407,7 +407,7 @@ function addredblocks(){
   }
 }
 function loadLanguage(language) {
-  let url = '../i18n.json';
+  let url = '../jsonfiles/i18n.json';
   fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -477,7 +477,7 @@ let checkerror4 = false;
 let checkerrorprivacy = false;
 const sign = document.getElementById("sign");
 sign.addEventListener("click", function(){
-  let url = '../i18n.json';
+  let url = '../jsonfiles/LoginAndPasswords.json';
   const password = document.getElementById('password').value;
   const validationMessage = validatePassword(password);
   validateEmail();

@@ -95,7 +95,7 @@ burgersustainability.addEventListener('click',function(event){
 })
 
 function loadLanguage(language) {
-  let url = '../i18n.json';
+  let url = '../jsonfiles/i18n.json';
   fetch(url)
     .then(response => response.json())
     .then(data => {
