@@ -299,7 +299,7 @@ else{
     checkusers.style.display ="flex";
   }
 }
-//Отправка формы регистрации
+//Отправка авторизации
 const Login = document.getElementById('log');
 Login.addEventListener('click', function(){
   let logup = document.getElementById("Logup").value;
@@ -476,84 +476,81 @@ let checkerror3 = false;
 let checkerror4 = false;
 let checkerrorprivacy = false;
 const sign = document.getElementById("sign");
-sign.addEventListener("click", function(){
-  let url = '../jsonfiles/LoginAndPasswords.json';
+let height = 1000;
+sign.addEventListener("click", function() {
+  let url = '../jsonfiles/LoginAndPasswods.json';
   const password = document.getElementById('password').value;
   const validationMessage = validatePassword(password);
   validateEmail();
   let checkboxprivacy = document.querySelector('.checkboxprivacy');
-  if(!checkboxprivacy.checked){
-    if(!checkerrorprivacy){
-      let errorMessge = document.createElement('p');
-    errorMessge.innerText = "Read Privacy policy";
-    errorMessge.style = "color: red; font-size: 12px" ;
-    document.querySelector('.Policy').insertAdjacentElement('afterend', errorMessge);
-    checkerrorprivacy = true;
-    }
-    
-  }
-  if(document.getElementById('password').value == document.getElementById('Cpassword').value){
+  let ussersArray = [];
+
+  if (document.getElementById('password').value == document.getElementById('Cpassword').value) {
     fetch(url)
-    .then(response => response.json())
-    .then(result =>{
-     ussersArray = result;
-    })
-    const newUser = {
-      email : document.getElementById('Email').value,
-      FirstName : document.getElementById('FirstName').value,
-      LastName : document.getElementById('LastName').value,
-      FatherName : document.getElementById('FatherName').value,
-      login : document.getElementById('Logup').value,
-      password : document.getElementById('password').value
-    }
-    ussersArray.push(newUser)
+      .then(response => response.json())
+      .then(result => {
+        ussersArray = result;
+      })
+      .then(() => {
+        const newUser = {
+          email: document.getElementById('Email').value,
+          FirstName: document.getElementById('FirstName').value,
+          LastName: document.getElementById('LastName').value,
+          FatherName: document.getElementById('FatherName').value,
+          login: document.getElementById('Logup').value,
+          password: document.getElementById('password').value
+        };
+        ussersArray.push(newUser);
+      });
   }
-  else if(validationMessage)
-    {
-      alert(validationMessage);
-  }
-  else if(document.getElementById('Email').value ==''){
-    if(!checkerror1){
+
+  if (!checkboxprivacy.checked) {
+    if (!checkerrorprivacy) {
       let errorMessge = document.createElement('p');
-    errorMessge.innerText = "Incorrect Email";
-    errorMessge.style = "color: red; font-size: 12px" ;
-    document.getElementById('Email').insertAdjacentElement('afterend', errorMessge);
-    checkerror1 = true;
-    return;
-    }
-    
-  }
-  else if(document.getElementById('FirstName').value ==''){
-    if(!checkerror2){
-  let errorMessge = document.createElement('p');
-    errorMessge.innerText = "Fisrt name cannot be empty";
-    errorMessge.style = "color: red; font-size: 12px" ;
-    document.getElementById('FirstName').insertAdjacentElement('afterend', errorMessge);
-    checkerror2 = true;
-    }
-   
-  }
-  else if(document.getElementById('LastName').value == ''){
-    if(!checkerror3){
-     let errorMessge = document.createElement('p');
-    errorMessge.innerText = "Last name cannot be empty";
-    errorMessge.style = "color: red; font-size: 12px" ;
-    document.getElementById('LastName').insertAdjacentElement('afterend', errorMessge);
-    checkerror3 = true; 
-    }
-    
-  }
-  else if(document.getElementById('Logup').value ==''){
-    if(!checkerror4){
-      let errorMessge = document.createElement('p');
-    errorMessge.innerText = "Incorrect account name";
-    errorMessge.style = "color: red; font-size: 12px" ;
-    document.getElementById('Logup').insertAdjacentElement('afterend', errorMessge);
-    checkerror4 = true;
+      errorMessge.innerText = "Read Privacy policy";
+      errorMessge.className = "error-message";
+      document.querySelector('.Policy').insertAdjacentElement('afterend', errorMessge);
+      registrmenu.style.height = `${height}px`;
+      checkerrorprivacy = true;
     }
   }
 
-})
+  if (validationMessage) {
+    alert(validationMessage);
+  }
+
+  const checkInput = (inputId, errorMsg, checkErrorVar) => {
+    const input = document.getElementById(inputId);
+    if (input.value === '') {
+      if (!window[checkErrorVar]) {
+        let errorMessge = document.createElement('p');
+        errorMessge.innerText = errorMsg;
+        errorMessge.className = "error-message";
+        input.insertAdjacentElement('afterend', errorMessge);
+        window[checkErrorVar] = true;
+        registrmenu.style.height = `${height + 100}px`;
+      }
+    }
+  };
+
+  checkInput('Email', 'Incorrect Email', 'checkerror1');
+  checkInput('FirstName', 'First name cannot be empty', 'checkerror2');
+  checkInput('LastName', 'Last name cannot be empty', 'checkerror3');
+  checkInput('Logup2', 'Incorrect account name', 'checkerror4');
+  checkInput('password', 'Input password', 'checkerror3');
+});
+
+const inputs = ['Email', 'FirstName', 'LastName', 'Logup2', 'password'];
+inputs.forEach(inputId => {
+  document.getElementById(inputId).addEventListener('input', function() {
+    const errorMessage = this.nextElementSibling;
+    if (errorMessage && errorMessage.classList.contains('error-message')) {
+      errorMessage.remove();
+      window[`checkerror${inputs.indexOf(inputId) + 1}`] = false;
+      registrmenu.style.height = `${height - 100}px`;
+    }
+  });
+});
 function validateEmail() {
   const emailInput = document.getElementById('Email');
   const email = emailInput.value.trim();
