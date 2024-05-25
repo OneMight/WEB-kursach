@@ -46,7 +46,7 @@ singup.addEventListener('click', function(){
 })
 const buttonshop = document.getElementById('shop-now-first');
 buttonshop.addEventListener('click', function () {
-  if(localStorage.getItem('logining') == true){
+  if(localStorage.getItem('logining') == 'true'){
     window.location = "../Shop/shopall.html";
     localStorage.setItem('currentpage','../Shop/shopall.html');
   }
@@ -69,7 +69,7 @@ buttonshopall.addEventListener('click',function(){
 })
 const shopnow = document.querySelector('.Button-shop-now');
 shopnow.addEventListener('click',function(){
-  if(localStorage.getItem('logining') == true){
+  if(localStorage.getItem('logining') == 'true'){
     window.location = "../Shop/shopall.html";
     localStorage.setItem('currentpage','../Shop/shopall.html');
   }
