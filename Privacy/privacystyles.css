@@ -1,0 +1,31 @@
+main > div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+}
+.headerprivacy{
+    text-align: center;
+    font-size: 25px;
+    text-transform: uppercase;
+    margin: 60px 0;
+}
+.privacydiv{
+    width: 90%;
+    font-size: 18px;
+    text-align: center;
+    margin: 50px 0;
+}
+
+main > div> div{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items:center;
+    flex-direction: column;
+}
+#logout{
+    display: none;
+}
+

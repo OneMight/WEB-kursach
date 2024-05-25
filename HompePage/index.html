@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="set-cookie">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="adaptivestyle.css">
+    <title class="i18n" i18n="title">Twiqs</title>
+</head>
+<body>
+    <header>
+        <a href="index.html">
+            <div id="logo"></div>
+        </a>
+            <div class="nav_menu">
+                <nav>
+                    <a id="shop" href="../Shop/shopall.html">
+                        <p i18n="shop" class=" i18n">Shop</p>
+                        <img src="../images/mark.svg" alt="">
+                    </a>
+                    <a id="about" href="../Read article/ReadArticle.html">
+                        <p i18n ="about" class="i18n">About</p>
+                        <img src="../images/mark.svg" alt="">
+                    </a>
+                    <a id="sustainability" href="../Questions/Questions.html">
+                        <p i18n ="sustainability" class="i18n">Sustainability</p>
+                    </a>
+                    <a id="checkusers" href="../Check All Users/checkallusers.html">
+                        <p i18n="checkusers" class="i18n">Check all users</p>
+                    </a>
+                </nav>
+            </div>
+            <select name="" id="languageSelect">
+                <option value="en" id="translateEN" select>en</option>
+                <option value="ru" id="translateRU">ru</option>
+            </select>
+            <div class="toogle-switch">
+                <label class="switch">
+                    <input type="checkbox" id="check">
+                    <span class="slider round"></span>
+                  </label>
+            </div>
+            
+            <div class="header-right">
+                <p class="username"></p>
+                <button id="Sign-up"><span i18n="signup" class="i18n signup">Sign up</span> </button>
+                <button id="Log-in"> <span i18n="login" class="i18n login">Log in</span></button>
+               
+                <button id="logout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                
+                <div >
+                    <img class="search-photo" src="../images/search.svg" alt="">
+                </div>
+                <div class="basket">
+                    <div >
+                        <img class="shoping" src="../images/shoping.svg" alt="">
+                    </div>
+                    <p>0<p>
+                </div>
+            </div>
+            <input type="checkbox" id="menu_toogle">
+            <label class="btn" for="menu_toogle">
+            <span></span>
+            </label>
+            <div class="burger-menu">
+                <p class="username"></p>
+                <button id="burgerlogout"><span i18n="logout" class="i18n logout">Log out</span> </button>
+                <div class="log">
+                   <button id="burgerLog"><span i18n="login" class="i18n login">Log in</span> </button>
+                    <button id="burgerSign"><span i18n="signup" class="i18n signup">Sign up</span> </button>
+                </div>
+               
+                <a href="../Shop/shopall.html" i18n="shop" class="i18n shop">Shop</a>
+                <a href="../Read article/ReadArticle.html" i18n="about" class="i18n about">About</a>
+                <a href="../Questions/Questions.html" i18n="sustainability" class="i18n sustainability">Sustainability</a>
+                <div class="theme">
+                    </div>
+                </div>
+            </div>
+    </header>
+    <main>
+        <div class="Login">
+            <button class="button-close-login buttonclose i18n" i18n="close" >Close</button>
+            <div>
+                <b i18n="login" class="i18n login">Log in</b>
+              
+                    <div class="login-form">
+                        <label for="Logup"><b i18n="AccountName" class="i18n">Account Name</b></label>
+                        <input id="Logup" type="text" placeholder="Enter Account name" name="Account" required>
+                        <label for="pws"><b i18n="Password" class="i18n">Password</b></label>
+                        <input id="PasswordLog" type="password" placeholder="Enter Password" required>
+                        <button id = "log"><span i18n="login" class="i18n">Log in</span></button>
+                    </div>
+                   
+              
+                
+            </div>
+        </div>
+        <div class="Register">
+            <button class="button-close-reg buttonclose i18n" i18n="close">Close</button>
+            <div>
+                <b class="i18n" i18n="signup">Sing up</b>
+                    
+                    <div class="reg-form">
+                        <label for="Email"><b class="i18n" i18n="Email">Email</b></label>
+                        <input id="Email" type="text" placeholder="Enter email" name="Email" required>
+                        <label for="FisrtName"><b class="i18n" i18n="FirstName">First Name</b></label>
+                        <input type="text" id="FirstName" placeholder="Enter First Name" name="FistName" required>
+                        <label for="LastName"><b class="i18n" i18n="LastName">Last Name</b></label>
+                        <input type="text" id="LastName" placeholder="Enter Last Name" name="LastName" required>
+                        <label for="FatherName"><b class="i18n" i18n="FatherName">Father Name</b></label>
+                        <input type="text" id="FatherName" placeholder="Enter Father Name" name="FatherName" >
+                        <button id="generatelogin">Generate login</button>
+                        <label for="Logup"><b class="i18n" i18n="AccountName">Account Name</b></label>
+                        <input id="Logup2" type="text" placeholder="Enter Account name" name="Account" required>
+                        <label for="pws"><b class="i18n" i18n="Password">Password</b></label>
+                        <input type="password" id="password" placeholder="Enter Password" name="passwod" required>
+                        <label for="pws"><b class="i18n" i18n="CPassword">Confirm Password</b></label>
+                        <input type="password" id="Cpassword" placeholder="Confirm Password" name="Comfpasswod" required>
+                        <div class="Policy">
+                            <input type="checkbox" class="checkboxprivacy">
+                            <a href="privacy.html" class="Privacy">Privacy Policy and Terms & Conditions</a>
+                        </div>
+                       
+                        <button id = "sign"><span class="i18n" i18n="signup" >Sign up</span></button>
+                    </div>
+               
+                
+                
+            </div>
+        </div>
+        <div class="container-first">
+            <div class="textForFirst">
+              
+                <span i18n="theEcoFriendlyWay" class="title-first i18n">the eco-friendly way to</span>
+                    <span i18n="giveBestWishes" class="text-first i18n ">
+                        Give the best wishes to your loved ones.
+                    </span>
+                <button id="shop-now-first"> <span i18n="shopNow" class="i18n shopNow">Shop Now</span>
+                    <img src="../images/row.svg" alt="">
+                </button>
+            </div>
+        </div>
+        <div class="container-second box unauthotized admin">
+            <div class="feedback">
+                <div>
+                    <p i18n="customerFeedback" class="i18n">
+                        Customer Feedback
+                    </p>
+                    <div class="stars">
+                    </div>
+                    <p i18n="basedOnEtsyReviews" class="i18n">
+                        based on 1000+ Etsy Reviews
+                    </p>
+                </div>
+            </div>
+            <div class="middle-text">
+                <p i18n="ourSmallestChoices" class="i18n">Our smallest choices have the potential for the
+                    biggest impact. Let’s make good ones together.
+               </p>
+               <button class="Sustainability openquest">
+                    <span i18n="sustainability" class="i18n ">Sustainability</span> 
+                    <img src="../images/rowblack.png" alt="">
+               </button>
+            </div>
+           
+        </div>
+        <div class="container-cards box unauthotized" >
+            <div class="text-and-button box">
+                <div>
+                    <p i18n="ourBestSellers" class="title-contaner i18n "> Our Best Sellers</p>
+                    <p i18n="deliverASmile" class="text-title i18n ">
+                        Deliver a smile to yourself or someone special
+                        with one of our sustainable favorites.
+                    </p>
+                </div>
+                <button id="shop-all">
+                    <span i18n="shopAllProducts" class="i18n shopAllProducts">Shop all products</span> 
+                    <img src="../images/row.svg" alt="">
+                </button>
+            </div>
+            <div class="container-slider">
+                <div class="Arrows ">
+                    <button id="arrow-left">
+                        <img src="../images/rowleft.png" alt="">
+                    </button>
+                    <button id="arrow-right">
+                        <img src="../images/rowright.png" alt="">
+                    </button>
+                </div>
+               
+                <div class="slider-images">
+                    <div class="images">
+                        <img src="../images/imag1.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n ">Assorted Card Set</p>
+                        <p i18n="dogs" class="name-card i18n ">Dogs</p>
+                        <p  class="price">$ 14.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag2.png" alt="">
+                        <p i18n="notebookSetOf3" class="title-card i18n ">Notebook Set of 3</p>
+                        <p i18n="northAmericanBirds" class="name-card i18n ">North American Birds</p>
+                        <p  class="price">$ 14.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag3.png" alt="">
+                        <p i18n="notebookSetOf3" class="title-card i18n ">Notebook Set of 3</p>
+                        <p i18n="newYorkLondonParis" class="name-card i18n ">New York, London, Paris</p>
+                        <p  class="price">$ 13.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag4.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n  ">Assorted Card Set</p>
+                        <p i18n="grandCanyonYosemiteArches1" class="name-card i18n ">Grand Canyon, Yosemite, Arches National Park</p>
+                        <p class="price ">$ 13.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag5.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n ">Assorted Card Set</p>
+                        <p i18n="grandCanyonYosemiteArches2" class="name-card i18n ">Unicorns</p>
+                        <p class="price">$ 14.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag6.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n ">Assorted Card Set</p>
+                        <p i18n="grandCanyonYosemiteArches3" class="name-card i18n ">Christian Sympathy & Encouragement Cards</p>
+                        <p class="price">$ 14.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag7.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n ">Assorted Card Set</p>
+                        <p i18n="grandCanyonYosemiteArches4" class="name-card i18n ">Ocean Life</p>
+                        <p class="price">$ 14.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag8.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n ">Assorted Card Set</p>
+                        <p i18n="grandCanyonYosemiteArches5" class="name-card i18n ">Sunflowers</p>
+                        <p class="price">$ 14.00</p>
+                    </div>
+                    <div class="images">
+                        <img src="../images/imag9.png" alt="">
+                        <p i18n="assortedCardSet" class="title-card i18n ">Assorted Card Set</p>
+                        <p i18n="grandCanyonYosemiteArches6" class="name-card i18n ">Cats</p>
+                        <p class="price">$ 14.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-third" id="qqq">
+            <div class="tortoes-container box">
+                <div class="tortoes">
+                </div>
+                <div class="right-tortoes">
+                    <div>
+                        <img src="../images/stars.svg" alt="">
+                    </div>
+                  
+                    <p i18n="grandCanyonYosemiteArches7" class="text-for-tortoes i18n "> 
+                       
+                        Beautiful cards and very high quality.
+                        They were shipped to me very quickly and
+                        the packaging was awesome.
+                        Definitely recommend and will order again.
+                       
+                    </p>
+                    <p>
+                        - Tirzah -  
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contaner-fourth box admin">
+                <div class="header-shipping">
+                    <p i18n="grandCanyonYosemiteArches8" class="i18n ">
+                        Led by Transparency
+                    </p>
+                </div>
+                <div class="cadrs-usa">
+                    <div>
+                        <img src="../images/email.png" alt="">
+                        <p i18n="grandCanyonYosemiteArches9" class="i18n ">
+                            Fast shipping. Free on orders over $25.
+                        </p>
+                    </div>
+                    <div>
+                        <img src="../images/world.png" alt="">
+                        <p i18n="grandCanyonYosemiteArches10" class="i18n ">Sustainable process from start to finish.</p>
+                    </div>
+                    <div>
+                        <img src="../images/writing.png" alt="">
+                        <p i18n="grandCanyonYosemiteArches11" class="i18n ">Unique designs and high-quality materials.</p>
+                    </div>
+                    <div>
+                        <img src="../images/usa.png" alt="">
+                        <p i18n="grandCanyonYosemiteArches12" class="i18n ">Partnering with small businesses in the USA.</p>
+                    </div>
+                </div>
+                <button class="Button-shop-now">
+                    <p i18n="grandCanyonYosemiteArches13" class="i18n "> Shop now</p>
+                    <img src="../images/row.svg" alt="">
+                </button>
+        </div>
+        <div class="container-fives box">
+            <div>
+                <div class="text-for-image">
+                    <p i18n="grandCanyonYosemiteArches14" class="i18n ">Inspiration</p>
+                    <p i18n="grandCanyonYosemiteArches15" class="weight i18n ">The Ultimate Guide: What to Write in a Birthday Card</p>
+                    <div>
+                        <p i18n="grandCanyonYosemiteArches17" class="i18n "><span i18n="grandCanyonYosemiteArches16" class="boldtext i18n ">Celebrate the life you have!</span> Birthdays are the one
+                             time of year we get to celebrate those closest to us 
+                             and we should take 
+                            the opportunity to let them know just 
+                            how much they are appreciated.
+                        </p>
+                            <p i18n="grandCanyonYosemiteArches18" class="i18n ">We all know that a unique birthday greeting card 
+                                is a great way to make the Birthday Person's day memorable.
+                                 But let’s be honest. Even though it seems simple,
+                                  writing a perfect birthday card sometimes isn’t
+                                   the easiest thing to do. That's why we compiled
+                                    a list of <span i18n="grandCanyonYosemiteArches19" class="boldtext i18n ">Birthday Wishes</span> 
+                                 to inspire your next Birthday Greeting Card.
+                        </p>
+                    </div>
+                    <a href="ReadArticle.html" id="read-article">
+                        <span i18n="grandCanyonYosemiteArches20" class="i18n ">Read article</span> 
+                        <img src="../images/rowblack.png" alt="">
+                    </a>
+                </div>
+                <div class="image">
+                    
+                </div>
+            </div>
+        </div>
+        <div class="container-sixes box">
+            <div>
+                <p i18n="grandCanyonYosemiteArches21" class="i18n ">Explore our products</p>
+                <div class=Cards>
+                    <div class="Greeting">
+                        <div>
+                            <span i18n="grandCanyonYosemiteArches22" class="i18n ">Greeting Cards</span>
+                        </div>
+                    </div>
+                    <div class="Assorted">
+                        <div>
+                            <span i18n="grandCanyonYosemiteArches23" class="i18n ">Assorder Card Sets</span>
+                        </div>
+                    </div>
+                    <div class="Notebooks">
+                        <div>
+                            <span i18n="grandCanyonYosemiteArches24" class="i18n ">Notebooks</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-sevens box">
+            <div class="water">
+
+            </div>
+            <div class="absolute-photos">
+                <p i18n="grandCanyonYosemiteArches25" class="i18n ">Say hi and follow along for updates <br> @twigspaper</p>
+                <img src="../images/absolutephoto1.png" alt="" class="abs1">
+                <img src="../images/abdsolutephoto2.png" alt="" class="abs2">
+                <img src="../images/abdsolutephoto3.png" alt="" class="abs3">
+                <img src="../images/abdsolutephoto4.png" alt="" class="abs4">
+                <img src="../images/abdsolutephoto5.png" alt="" class="abs5">
+                <img src="../images/abdsolutephoto6.png" alt="" class="abs6">
+                <img src="../images/abdsolutephoto7.png" alt="" class="abs7">
+            </div>
+        </div>
+        <div class="map box">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11041.084545531883!2d39.817601816531145!3d46.22495253561388!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40e4cbffce621131%3A0x7f5fc17c1211a2c6!2z0JLQtdGB0LXQu9Cw0Y8g0JbQuNC30L3RjCwg0JrRgNCw0YHQvdC-0LTQsNGA0YHQutC40Lkg0LrRgNCw0LksINCg0L7RgdGB0LjRjywgMzUyMDU4!5e0!3m2!1sru!2sby!4v1713176691317!5m2!1sru!2sby" width="1000" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        
+        <footer>
+            <div class="container-footer">
+                <div class="links">
+                    <div class="logo-footer"></div>
+                    <div>
+                        <div>
+                            <a href="tel:+375257325957">+375257325957</a>
+                            <a href="https://mail.google.com/mail/u/0/#inbox?compose=CllgCJTGmpHcPtXtjVhLWsgsNRpwVNcljDqnbVwnQqsNQhhCxJtVBHzWPNqlzXjQfsnkCnVFLdq">dimamirankov63@gmail.com</a>
+                            <a href="https://github.com/OneMight">GitHub</a>
+                            <a href="https://www.facebook.com/?locale=ru_RU">Facebook</a>
+                        </div>
+                    </div>
+                </div>
+              
+                <div class="footer-nav-menu">
+                    <div>
+                        <p i18n="grandCanyonYosemiteArches34" class="i18n ">Shop</p>
+                        <a i18n="grandCanyonYosemiteArches26" href="../Shop/shopall.html" class="i18n ">Shop all</a>
+                        <a i18n="grandCanyonYosemiteArches27" href="" class="i18n ">Greeting Cards</a>
+                        <a i18n="grandCanyonYosemiteArches28" href="" class="i18n ">Assorted Cards Sets</a>
+                        <a i18n="grandCanyonYosemiteArches29" href="" class="i18n ">Notebooks</a>
+                    </div>
+                    <div>
+                        <p i18n="grandCanyonYosemiteArches35" class="i18n ">About</p>
+                        <a i18n="grandCanyonYosemiteArches30" href="" class="i18n ">Our story</a>
+                        <a i18n="grandCanyonYosemiteArches31" href="" class="i18n ">Our Values</a>
+                        <a i18n="grandCanyonYosemiteArches32" href="" class="i18n ">Journal</a>
+                        <a i18n="grandCanyonYosemiteArches33" href="../Questions/Questions.html" class="i18n ">Sustainability</a>
+                    </div>
+                    <div>
+                        <p i18n="grandCanyonYosemiteArches36" class="i18n ">Customer Care</p>
+                        <a i18n="grandCanyonYosemiteArches37" href="../Read article/ReadArticle.html" class="i18n ">About Us</a>
+                        <a i18n="grandCanyonYosemiteArches38" href="" class="i18n ">FAQs</a>
+                        <a i18n="grandCanyonYosemiteArches39" href="" class="i18n ">Return & Exchanges</a>
+                        <a i18n="grandCanyonYosemiteArches40" href="" class="i18n ">Support</a>
+                    </div>
+                    <div>
+                        <p i18n="grandCanyonYosemiteArches41" class="i18n ">Wholesales</p>
+                        <a i18n="grandCanyonYosemiteArches42" href="" class="i18n ">Overview</a>
+                        <a i18n="grandCanyonYosemiteArches43" href="" class="i18n ">Register as a Wholesales</a>
+                        <a i18n="grandCanyonYosemiteArches44" href="" class="i18n ">Access the Wholesales Store</a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                   <span i18n="grandCanyonYosemiteArches45" class="i18n ">© 2021 Twigs Paper. All Rights Reserved.</span>
+                    <div>
+                        <a i18n="grandCanyonYosemiteArches46" href="../Privacy/privacy.html" class="i18n ">Privacy Policy</a>
+                        <a i18n="grandCanyonYosemiteArches47" href="../Privacy/privacy.html" class="i18n ">Terms & Conditions</a>
+                    </div>
+                   <span i18n="grandCanyonYosemiteArches48" class="i18n ">Built by The Papestielliz</span>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script src="script.js"></script>
+
+</body>
+</html>
